@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Solution des exercices de : Derek Goldrei, Propositional and predicate calculus.</title>
+    <style>
+.paragraph_body {
+        margin-left: 3%;
+}
+</style>
+  </head>
+  <body>
+  <h2>Solutions des exercices de : Derek Goldrei, Propositional and predicate calculus.</h2>
+  <h3>Exercice 3.1</h3>
+  <h4>Soit la séquence &phi; 
+  <sub>0</sub>,&phi; 
+  <sub>1</sub>,...,&phi; 
+  <sub>n</sub>=&phi; une dérivation de &Gamma;&#8866;&phi;. Montrer que pour tout i &lt; n il existe une dérivation
+  &Gamma;&#8866;&phi; 
+  <sub>i</sub>.</h4>
+  <div class="paragraph_body">Preuve :
+  <br />
+  <div>En effet toute formule &phi; 
+  <sub>i</sub> de &phi; 
+  <sub>0</sub>...&phi; 
+  <sub>n</sub> a été obtenue
+  <br />- soit par la règle des hypothèses, et donc &phi; 
+  <sub>i</sub>&isin;&Gamma; et donc &Gamma;&#8866;&phi; 
+  <sub>i</sub>.
+  <br />- soit comme instance d&#39;axiome, et donc &#8866;&phi; 
+  <sub>i</sub> et &Gamma;&#8866;&phi; 
+  <sub>i</sub>.
+  <br />- soit par Modus Ponens. Donc il existe deux formules &phi; 
+  <sub>a</sub>, &phi; 
+  <sub>b</sub> antérieures à &phi; 
+  <sub>i</sub> dans la dérivation telles que &phi; 
+  <sub>b</sub>=&phi; 
+  <sub>a</sub>&rarr;&phi; 
+  <sub>n</sub>.
+  <br />On montre par induction sur la longueur des dérivations que &Gamma;&#8866;&phi; 
+  <sub>n</sub>.
+  <br />Cas de base : on a bien &Gamma;&#8866;&phi; 
+  <sub>0</sub> car &phi; 
+  <sub>0</sub> est un axiome ou une hypothèse.
+  <br />Hypothèse d&#39;induction : si &Gamma;&#8866;&phi; 
+  <sub>i</sub> pour tout i &lt; n, alors &Gamma;&#8866;&phi; 
+  <sub>n</sub>. En effet, &phi; 
+  <sub>n</sub> est soit une hypothèse ou un axiome (et dans ce cas on montre &Gamma;&#8866;&phi; 
+  <sub>n</sub> de la même façon que &Gamma;&#8866;&phi; 
+  <sub>0</sub>)
+  <br />soit a été obtenue par Modus Ponens.
+  <br />Donc il existe deux formules &phi; 
+  <sub>i</sub>, &phi; 
+  <sub>j</sub> antérieures à &phi; 
+  <sub>n</sub> dans la dérivation (&phi; 
+  <sub>j</sub> = &phi; 
+  <sub>i</sub>&rarr;&phi; 
+  <sub>n</sub>). Selon l&#39;hypothèse d&#39;induction on a : &Gamma;&#8866;&phi; 
+  <sub>i</sub> et &Gamma;&#8866;&phi; 
+  <sub>j</sub>.
+  <br />Par Modus Ponens on en conclut &Gamma;&#8866;&phi; 
+  <sub>n</sub> &#8718;.</div></div>
+  <h3>Exercice 3.2</h3>
+  <div>a) (&not;&not;q&rarr;&not;p) &#8866; (p&rarr;&not;q) ?</div>
+  <div class="paragraph_body">
+  <br />(a) (&not;&not;q&rarr;&not;p) Hypothèse
+  <br />(&not;&not;q&rarr;&not;p)&rarr;(p&rarr;&not;q) Axiome 3
+  <br />(p&rarr;&not;q) Modus Ponens 1,2
+  <br />
+  <br />(b) ((p&rarr;&not;q)&rarr;((&not;&not;q&rarr;&not;p)&rarr;(p&rarr;&not;q))) Axiome 1
+  <br />((&not;&not;q&rarr;&not;p)&rarr;(p&rarr;&not;q)) Axiome 3
+  <br />(p&rarr;&not;q) Modus Ponens 1,2
+  <br />
+  <br />(c) ((&not;&not;q&rarr;&not;p)&rarr;(p&rarr;&not;q)) Axiome 3
+  <br />(&not;p&rarr;(&not;&not;&not;q&rarr;&not;p)) Axiome 1
+  <br />(&not;&not;q&rarr;&not;p) Hypothèse
+  <br />(p&rarr;&not;q) Modus Ponens 1,3
+  <br /></div>
+  <div>b) ?</div>
+  <div>c) ?</div>
+  <h3>Exercice 3.3</h3>
+  <div class="paragraph_body">
+    <h4>Dérivations n&#39;utilisant pas le Modus Ponens</h4>
+    <div>Toutes les formules de la séquence sont soit des axiomes soit des hypothèses.</div>
+    <h4>Dérivations n&#39;utilisant pas la règle des hypothèses</h4>
+    <div>Toutes les formules sont soit des axiomes soit des théorèmes formels, donc des tautologies.</div>
+    <h4>Dérivations n&#39;utilisant pas les axiomes</h4>
+    <div>Toutes les formules sont soit des hypothèses ou des conséquences des hypothèses.</div>
+  </div>
+  <h3>Exercice 3.4</h3>
+  <div class="paragraph_body">
+    <div>Soit &Gamma;&#8866;&phi;</div>
+    <div>Montrer qu&#39;il y a une infinité de dérivations.</div>
+  </div>
+  <h3>Exercice 3.5</h3>
+  <h4>(a) Montrer que tous les axiomes de S sont des tautologies.</h4>
+  <h5>Axiome 1</h5>
+  <div class="paragraph_body">
+  <div>&theta;=&phi;&rarr;(&psi;&rarr;&phi;)</div>Pour toute valuation v, v(&theta;)=F si et seulement si v(&phi;)=T et
+  v(&psi;&rarr;&phi;)=F.
+  <br />Mais v(&psi;&rarr;&phi;)=F si et seulement si v(&psi;)=T et v(&phi;)=F
+  <br />, ce qui contredit la première condition.
+  <br />Donc v(&theta;)=T pour tout v &#8718;.</div>
+  <h5>Axiome 2</h5>
+  <div class="paragraph_body">
+  <div>&theta;=&phi;&rarr;(&psi;&rarr;&chi;)&rarr;(&phi;&rarr;&psi;)&rarr;(&phi;&rarr;&chi;)</div>
+  <div>v(&theta;)=F ssi v(&phi;&rarr;(&psi;&rarr;&chi;)) = T et v((&phi;&rarr;&psi;)&rarr;(&phi;&rarr;&chi;)) = F</div>
+  <div>donc ssi v(&phi;&rarr;&psi;) = T et v(&phi;&rarr;&chi;) = F</div>donc ssi v(&phi;) = T et v(&chi;) = F.
+  <br />donc ssi v(&psi;) = T.
+  <br />Mais dans ce cas v(&phi;&rarr;(&psi;&rarr;&chi;)) = F.
+  <br />Donc v(&theta;) = T pour tout v &#8718;.</div>
+  <h5>Axiome 3</h5>
+  <div class="paragraph_body">
+  <div>&theta; = (&not;&phi;&rarr;&not;&psi;)&rarr;(&psi;&rarr;&phi;)</div>
+  <div>v(&theta;) = F ssi v(&not;&phi;&rarr;&not;&psi;) = T et v(&psi;&rarr;&phi;) = F
+  <br />donc ssi v(&psi;) = T et v(&phi;) = F
+  <br />Mais dans ce cas v(&not;&phi;&rarr;&not;&psi;) = F et donc v(&theta;) = T pour tout v &#8718;.
+  <br /></div>
+  <br />
+  <div>(b) Montrer que si &Gamma;&#8872;&phi; et &Gamma;&#8872;(&phi;&rarr;&psi;) alors &Gamma;&#8872;&psi;.</div>
+  <br />Pour tout v, si v(&theta;) = T et v(&theta;&rarr;&psi;) = T alors selon la table de vérité de &rarr; v(&psi;) = T.
+  <br />Donc si pour tout v, si v(&Gamma;) = T alors v(&theta;) = T, on a aussi si v(&Gamma;) = T alors v(&psi;) = T et donc
+  &Gamma;&#8872;&psi; &#8718;.</div>
+  <h3>Exercice 3.6</h3>
+  <div>Montrer que si &Gamma; et &Delta; sont des ensembles de formules telles que &Gamma;&sube;&Delta; alors si
+  &Gamma;&#8872;&phi; alors &Delta;&#8872;&phi;
+  <br />&forall; valuation v, si v(&Delta;) = T alors v(&Gamma;) = T.
+  <br />Puisqu&#39;on a &Gamma;&#8872;&phi;, si v(&Gamma;) = T alors v(&phi;) = T.
+  <br />Donc si v(&Delta;) = T alors v(&phi;) = T c&#39;est-à-dire &Delta;&#8872;&phi; &#8718;.</div>
+  <h3>Exercice 3.7</h3>
+  <div class="paragraph_body">
+    <div>a) &phi;, (&phi;&rarr;&psi;), (&psi;&rarr;&theta;) &#8866; &theta;</div>
+    <ol>
+      <li>&phi; hypothèse 1</li>
+      <li>(&phi;&rarr;&psi;) hypothèse 2</li>
+      <li>&psi; Modus Ponens 1,2</li>
+      <li>(&psi;&rarr;&theta;) hypothèse 3</li>
+      <li>&theta; Modus Ponens 3,4 &#8718;</li>
+    </ol>
+    <br />
+    <div>b) p, (p&rarr;q), (p&rarr;(q&rarr;r)) &#8866; r</div>
+    <ol>
+      <li>p hypothèse 1</li>
+      <li>(p&rarr;q) hypothèse 2</li>
+      <li>q Modus Ponens 1,2</li>
+      <li>(p&rarr;(q&rarr;r)) hypothèse 3</li>
+      <li>(q&rarr;r) Modus Ponens 1,4</li>
+      <li>r Modus Ponens 3,5 &#8718;</li>
+    </ol>
+    <br />
+    <div>c) &#8866; (p&rarr;p)</div>
+    <ol>
+      <li>(p&rarr;((p&rarr;p)&rarr;p) Axiome 1</li>
+      <li>(p&rarr;((p&rarr;p)&rarr;p) &rarr; (p&rarr;(p&rarr;p) &rarr; (p&rarr;p)) Axiome 2</li>
+      <li>(p&rarr;(p&rarr;p) &rarr; (p&rarr;p)) Modus Ponens 1,2</li>
+      <li>(p&rarr;(p&rarr;p)) Axiome 1</li>
+      <li>(p&rarr;p) Modus Ponens 3,4 &#8718;</li>
+    </ol>
+    <br />
+    <div>d) (&psi;&rarr;&theta;), (&phi;&rarr;&psi;) &#8866; (&phi;&rarr;&theta;)</div>
+    <ol>
+      <li>(&psi;&rarr;&theta;) &rarr; (&phi;&rarr;(&psi;&rarr;&theta;)) Axiome 1</li>
+      <li>(&psi;&rarr;&theta;) hypothèse 1</li>
+      <li>&phi;&rarr;(&psi;&rarr;&theta;) Modus Ponens 1,2</li>
+      <li>&phi;&rarr;(&psi;&rarr;&theta;) &rarr; (&phi;&rarr;&theta;)&rarr;(&phi;&rarr;&theta;) Axiome 2</li>
+      <li>(&phi;&rarr;&theta;)&rarr;(&phi;&rarr;&theta;) Modus Ponens 3,4</li>
+      <li>(&phi;&rarr;&psi;) hypothèse 2</li>
+      <li>(&phi;&rarr;&theta;) Modus Ponens 5,6 &#8718;</li>
+    </ol>
+    <div>e) (&not;&not;&psi;&rarr;&not;&not;&phi;) &#8866; (&psi;&rarr;&phi;)</div>
+    <ol>
+      <li>(&not;&not;&psi;&rarr;&not;&not;&phi;) &rarr; (&not;&phi;&rarr;&not;&psi;) Axiome 3</li>
+      <li>(&not;&not;&psi;&rarr;&not;&not;&phi;) hypothèse 1</li>
+      <li>(&not;&phi;&rarr;&not;&psi;) Modus Ponens 1,2</li>
+      <li>(&not;&phi;&rarr;&not;&psi;)&rarr;(&psi;&rarr;&phi;) Axiome 3</li>
+      <li>&psi;&rarr;&phi; Modus Ponens 3,4 &#8718;</li>
+    </ol>
+    <div>f) &not;&psi; &#8866; (&psi;&rarr;&phi;)</div>
+    <ol>
+      <li>&not;&psi;&rarr;(&not;&phi;&rarr;&not;&psi;) Axiome 1</li>
+      <li>&not;&psi; hypothèse 1</li>
+      <li>(&not;&phi;&rarr;&not;&psi;) Modus Ponens 1,2</li>
+      <li>(&not;&phi;&rarr;&not;&psi;) &rarr; (&psi;&rarr;&phi;) Axiome 3</li>
+      <li>(&psi;&rarr;&phi;) Modus Ponens 3,4 &#8718;</li>
+    </ol>
+    <div>g) &#8866; (&psi;&rarr;(&not;&psi;&rarr;&phi;))</div>
+  </div>
+  <h3>Exercice 3.8</h3>
+  <div class="paragraph_body">
+    <div>a) Montrer que si &Gamma; &#8866; (&phi;&rarr;&psi;) alors &Gamma;,&phi; &#8866; &psi;</div>
+    <div>Si &Gamma; &#8866; (&phi;&rarr;&psi;) alors aussi &Gamma;,&phi; &#8866; (&phi;&rarr;&psi;) [3.1ii]</div>
+    <div class="paragraph_body">Pour obtenir une dérivation &Gamma;,&phi; &#8866; &psi; nous ajoutons 2 lignes à la dérivation
+    précédente.
+    <br />&Gamma;,&phi; &#8866; &phi;&rarr;&psi; (k)
+    <br />&phi; hypothèse (k+1)
+    <br />&psi; Modus Ponens k,k+1</div>
+  </div>
+  <div class="paragraph_body">
+    <div>b) Montrer que si &Gamma; &#8866; &phi; et &Delta;,&phi; &#8866; &psi; alors &Gamma;,&Delta; &#8866; &psi;.</div>
+    <div>Soit &phi; 
+    <sub>1</sub>, &phi; 
+    <sub>2</sub>,...,&phi; 
+    <sub>m</sub> la dérivation &Gamma; &#8866; &phi;.</div>
+    <div>Soit &psi; 
+    <sub>1</sub>,&psi; 
+    <sub>2</sub>,...,&psi; 
+    <sub>n</sub> la dérivation &Delta;,&phi; &#8866; &psi;.</div>
+    <div class="paragraph_body">En joignant les deux séquences &phi; 
+    <sub>1</sub>, &phi; 
+    <sub>2</sub>,...,&phi; 
+    <sub>n</sub>, &psi; 
+    <sub>1</sub>,&psi; 
+    <sub>2</sub>,...,&psi; 
+    <sub>n</sub> on obtient une dérivation valide de &Gamma;,&Delta; &#8866; &psi;.
+    <br />Soit &theta; une formule de la séquence &phi; 
+    <sub>1</sub>...&psi; 
+    <sub>n</sub> On montre que &Gamma;,&Delta; &#8866; &theta; :
+    <br />&theta; est :
+    <br />- une hypothèse de &Gamma; ou &Delta; (et donc &theta; &isin; &Gamma;,&Delta; et donc &Gamma;,&Delta; &#8866; &theta;)
+    <br />-un axiome (donc &#8866; &theta; et donc &Gamma;,&Delta; &#8866; &theta;),
+    <br />- &theta; = &phi; et comme &Gamma; &#8866; &phi;, &Gamma; &#8866; &theta; et donc &Gamma;,&Delta; &#8866; &theta;.
+    <br />-une formule dérivée par Modus Ponens. Si &theta; existe dans &phi; 
+    <sub>1</sub>...&phi; 
+    <sub>m</sub> on a &Gamma;&#8866;&theta;
+    <br />et donc &Gamma;,&Delta; &#8866; &theta;.
+    <br />Si &theta; existe dans &psi; 
+    <sub>1</sub>...&psi; 
+    <sub>n</sub>, puisqu&#39;on a &Delta;,&phi; &#8866; &psi;, il y a deux cas :
+    <br />Si &Delta; &#8866; &psi; 
+    <sub>i</sub>=&theta; alors &Gamma;, &Delta; &#8866; &theta;
+    <br />Si &Delta; &#8876; &psi; 
+    <sub>i</sub> avec &Delta;,&phi; &#8866; &psi; 
+    <sub>i</sub> il y a une occurrence de &phi; dans &psi; 
+    <sub>1</sub>...&psi; 
+    <sub>i</sub> justifiée en tant qu&#39;hypothèse.
+    <br />Comme a obtenu antérieurement &Gamma;&#8866;&phi; 
+    <sub>n</sub>=&phi;, il suffit de supprimer cette occurrence dans la dérivation
+    <br />et en remplaçant toutes les références à cette occurrence par une référence à &phi; 
+    <sub>n</sub> ainsi on obtient une dérivation valide de chaque &psi; 
+    <sub>i</sub> et donc &Gamma;,&Delta; &#8866; &psi; 
+    <sub>i</sub>=&theta; &#8718;.</div>
+    <div>c) Montrer que si &Gamma; &#8866; &psi; et &Gamma; &#8866; &not;&psi; alors &Gamma; &#8866; &phi; pour toute formule
+    &phi;.</div>
+    <div class="paragraph_body">Selon 3.7f &not;&psi; &#8866; (&psi;&rarr;&phi;)
+    <br />Donc on obtiernt une dérivation de &phi; par : &Gamma; &#8866; &not;&psi; &#8866; &psi; &#8866; &psi;&rarr;&phi; (3.7f)
+    &#8866; &phi; (Modus Ponens).</div>
+  </div>
+  <h3>Exercice 3.9</h3>
+  <div class="paragraph_body">
+    <div>a) &#8866;(&phi;&rarr;(&psi;&rarr;&theta;))&rarr;(&psi;&rarr;(&phi;&rarr;&theta;))</div>
+    <div class="paragraph_body">Selon le théorème de la déduction on a
+    <br />(&phi;&rarr;(&psi;&rarr;&theta;)) &#8866; (&psi;&rarr;(&phi;&rarr;&theta;))
+    <br />donc selon le même théorème :
+    <br />(&phi;&rarr;(&psi;&rarr;&theta;)),&psi; &#8866; (&phi;&rarr;&theta;)
+    <br />et encore selon le même théorème :
+    <br />(&phi;&rarr;(&psi;&rarr;&theta;)),&psi;,&phi; &#8866; &theta;
+    <br />(&phi;&rarr;(&psi;&rarr;&theta;)) Hypothèse 1
+    <br />&phi; Hypothèse 3
+    <br />(&psi;&rarr;&theta;) Modus Ponens
+    <br />&psi; Hypothèse 2
+    <br />&theta; Modus Ponens &#8718;.
+    <br /></div>
+    <div>b) &#8866; (&not;&not;p&rarr;p)</div>
+    <div class="paragraph_body">Selon le théorème de la déduction : &quot;b&quot; est vraie si et seulement si : &not;&not;p
+    &#8866; p
+    <br />&not;&not;p Hypothèse 1
+    <br />&not;&not;p&rarr;(&not;&not;(p&rarr;p)&rarr;&not;&not;p) Axiome 1
+    <br />&not;&not;(p&rarr;p)&rarr;&not;&not;p Modus Ponens
+    <br />&not;&not;(p&rarr;p)&rarr;&not;&not;p&rarr;&not;p&rarr;&not;(p&rarr;p) Axiome 3
+    <br />&not;p&rarr;&not;(p&rarr;p) Modus Ponens
+    <br />&not;p&rarr;&not;(p&rarr;p)&rarr;(p&rarr;p)&rarr;p Axiome 3
+    <br />(p&rarr;p)&rarr;p Modus Ponens
+    <br />(p&rarr;p) 3.7c
+    <br />p Modus Ponens &#8718;.
+    <br /></div>
+    <div>c) &#8866; (p&rarr;&not;&not;p)</div>
+    <div class="paragraph_body">Selon le théorème de la déduction p &#8866; &not;&not;p
+    <br />Selon &quot;b&quot; précédemment, &not;&not;&not;p &#8866; &not;p
+    <br />Donc &#8866;&not;&not;&not;p&rarr;&not;p
+    <br />(&not;&not;&not;p&rarr;&not;p)&rarr;(p&rarr;&not;&not;p) Axiome 3
+    <br />p&rarr;&not;&not;p Modus Ponens &#8718;.</div>
+  </div>
+  <h3>Théorèmes de la preuve par contradiction</h3>
+  <div class="paragraph_body">
+    <h4>Si &Gamma;,&not;&phi; &#8866; &psi; et &Gamma;,&not;&phi; &#8866; &not;&psi; alors &Gamma;&#8866;&phi;</h4>
+    <h4>Si &Gamma;,&phi; &#8866; &psi; et &Gamma;,&phi; &#8866; &not;&psi; alors &Gamma;&#8866;&not;&phi;</h4>
+    <div class="paragraph_body">Lemme : (&not;&phi;&rarr;&phi;)&#8866;&phi;
+    <br />Puisque &forall;&phi;,&psi; on a : &psi;,&not;&psi;&#8866;&phi;
+    <br />&phi;,&not;&phi;&#8866;&not;(&not;&phi;&rarr;&phi;)
+    <br />Selon le théorème de la déduction
+    <br />&#8866;&not;&phi;&rarr;(&phi;&rarr;&not;(&not;&phi;&rarr;&phi;))
+    <br />&not;&phi;&rarr;(&phi;&rarr;&not;(&not;&phi;&rarr;&phi;)) &rarr; (&not;&phi;&rarr;&phi;) &rarr;
+    (&not;&phi;&rarr;&not;(&phi;&rarr;&phi;)) Axiome 2
+    <br />(&not;&phi;&rarr;&phi;) &rarr; (&not;&phi;&rarr;&not;(&phi;&rarr;&phi;)) Modus Ponens
+    <br />&not;&phi;&rarr;&phi; Hypothèse 1
+    <br />&not;&phi;&rarr;&not;(&not;&phi;&rarr;&phi;) Modus Ponens
+    <br />&not;&phi;&rarr;&not;(&not;&phi;&rarr;&phi;) &rarr; (&not;&phi;&rarr;&phi;)&rarr;&phi; Axiome 3
+    <br />(&not;&phi;&rarr;&phi;)&rarr;&phi; Modus Ponens
+    <br />&phi; Modus Ponens
+    <br />Si &Gamma;,&not;&phi;&#8866;&psi; et &Gamma;,&not;&phi;&#8866;&not;&psi; alors selon le théorème de la déduction
+    &Gamma;&#8866;(&not;&phi;&rarr;&not;&psi;)
+    <br />(&not;&phi;&rarr;&not;&psi;)&rarr;(&psi;&rarr;&phi;)
+    <br />(&psi;&rarr;&phi;) Modus Ponens
+    <br />&Gamma;&#8866;&psi;&rarr;&phi; Axiome 3
+    <br />et donc &Gamma;,&psi;&#8866;&phi; [3.8a]
+    <br />Si &Gamma;&#8866;&phi; et &Delta;,&phi;&#8866;&psi; alors &Gamma;,&Delta;&#8866;&psi; [3.8b].
+    <br />Donc si &Gamma;,&not;&phi;&#8866;&psi; et &Gamma;,&psi;&#8866;&phi; alors &Gamma;,&not;&phi;&#8866;&phi;.
+    <br />Selon le théorème de la déduction on a &Gamma;&#8866;(&not;&phi;&rarr;&phi;)
+    <br />et selon le lemme puisque &#8866;((&not;&phi;&rarr;&phi;)&rarr;&phi;) on a &Gamma;&#8866;&phi;.</div>
+  </div>
+  <h3>Exercice 3.10</h3>
+  <h4>a) &not;(&theta;&rarr;&psi;)&#8866;&theta;</h4>
+  <div class="paragraph_body">Selon 3.7f
+  <br />&not;&theta;&#8866;(&theta;&rarr;&psi;)
+  <br />Donc &not;(&theta;&rarr;&psi;),&not;&theta;&#8866;(&theta;&rarr;&psi;)
+  <br />et aussi &not;(&theta;&rarr;&psi;),&not;&theta;&#8866;&not;(&theta;&rarr;&psi;) (règle des hypothèses)
+  <br />Selon le théorème 3.2a de la preuve par contradiction (avec &Gamma; = {&not;(&theta;&rarr;&psi;)}, &phi; = &theta;, &psi;
+  = &theta;)
+  <br />on a &Gamma;&#8866;&psi; c&#39;est-à-dire &not;(&theta;&rarr;&psi;)&#8866;&theta; &#8718;.</div>
+  <h4>b) &theta;,&not;&psi;&#8866;&not;(&theta;&rarr;&psi;)</h4>
+  <div class="paragraph_body">&theta;,&not;&psi;,(&theta;&rarr;&psi;) &#8866; &psi; (Modus Ponens sur &theta; et
+  (&theta;&rarr;&psi;)).
+  <br />&theta;,&not;&psi;,(&theta;&rarr;&psi;) &#8866; &not;&psi; (règle des hypothèses)
+  <br />Selon le théorème 3.2b de la preuve par contradiction (avec &Gamma; = {&theta;,&not;&psi;}, &phi; = (&theta;&rarr;&psi;),
+  &psi; = &psi;)
+  <br />&theta;,&not;&psi;&#8866;&not;(&theta;&rarr;&psi;) &#8718;.</div>
+  <h4>c) Si &Gamma;&#8866;(&phi;&rarr;&psi;) et &Gamma;&#8866;(&psi;&rarr;&theta;) alors &Gamma;&#8866;(&phi;&rarr;&theta;)</h4>
+  <div class="paragraph_body">Si &Gamma;&#8866;(&phi;&rarr;&psi;) et &Gamma;&#8866;(&psi;&rarr;&theta;)
+  <br />&Gamma;,&phi;&#8866;(&phi;&rarr;&psi;) et &Gamma;,&phi;&#8866;(&psi;&rarr;&theta;)
+  <br />&Gamma;,&phi;&#8866;&psi; (Modus Ponens) et &Gamma;,&phi;&#8866;(&psi;&rarr;&theta;)
+  <br />Donc &Gamma;,&phi;&#8866;&theta; (Modus Ponens) et donc &Gamma;&#8866;(&phi;&rarr;&theta;) (théorème de la déduction)
+  &#8718;.</div>
+  <h4>d) Si &Gamma;,&not;&phi; &#8866; &not;&psi; alors &Gamma;,&psi; &#8866; &phi;</h4>
+  <div class="paragraph_body">Si &Gamma;,&not;&phi; &#8866; &not;&psi; alors &Gamma; &#8866; &not;&phi; &rarr; &not;&psi;
+  (théorème de la déduction)
+  <br />(&not;&phi;&rarr;&not;&psi;)&rarr;(&psi;&rarr;&phi;) Axiome 3
+  <br />&Gamma;&#8866;(&psi;&rarr;&phi;) Modus Ponens
+  <br />&Gamma;,&psi;&#8866;&phi; [3.8a]</div>
+  <h4>e) Si &Gamma;,&phi; &#8866; &not;&psi; alors &Gamma;,&psi; &#8866; &not;&phi;.</h4>
+  <h4>f) Si &Gamma;,&phi; &#8866; &theta; et &Gamma;,&not;&phi; &#8866; &theta; alors &Gamma; &#8866; &theta;.</h4>
+  <h3>Exercice 3.11</h3>
+  <div class="paragraph_body">
+    <h4>Théorème de la déduction : &forall; &Gamma;, &phi;, &psi; : si &Gamma;,&phi; &#8866; &psi; alors &Gamma; &#8866; (&phi;
+    &rarr; &psi;).</h4>
+    <div class="paragraph_body">Soit &Gamma;,&phi;&#8866;&psi; 
+    <sub>1</sub> ... &psi; 
+    <sub>n</sub>=&psi; la dérivation.
+    <br />La formule &psi; 
+    <sub>n</sub> peut avoir été obtenue soit comme hypothèse, soit comme axiome, soit par Modus Ponens.
+    <br />
+    <br />a) Si &psi; 
+    <sub>n</sub> est une hypothèse, alors
+    <br />-&psi; 
+    <sub>n</sub>&isin;&Gamma;, ou :
+    <br />-&psi; 
+    <sub>n</sub>=&phi;.
+    <br />Si &psi; 
+    <sub>n</sub>=&phi; alors puisque &#8866;&phi;&rarr;&phi; (théorème) on a &#8866;&phi;&rarr;&psi; 
+    <sub>n</sub> donc &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>n</sub>.
+    <br />Si &psi; 
+    <sub>n</sub>&isin;&Gamma; alors &Gamma;&#8866;&psi; 
+    <sub>n</sub>.
+    <br />Puisque &#8866; &psi; 
+    <sub>n</sub>&rarr;(&phi;&rarr;&psi; 
+    <sub>n</sub>) (Axiome 1) alors &Gamma;&#8866; &psi; 
+    <sub>n</sub>&rarr;(&phi;&rarr;&psi; 
+    <sub>n</sub>)
+    <br />et &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>n</sub> par Modus Ponens.
+    <br />
+    <br />b) Si &psi; 
+    <sub>n</sub> est un axiome alors puisque &#8866;&psi; 
+    <sub>n</sub>&rarr;(&phi;&rarr;&psi; 
+    <sub>n</sub>) (Axiome 1)
+    <br />on a &#8866;&phi;&rarr;&psi; 
+    <sub>n</sub> par Modus Ponens et donc &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>n</sub>.
+    <br />
+    <br />c) Si &psi; 
+    <sub>n</sub> a été obtenue par Modus Ponens.
+    <br />Dans ce cas n &gt;= 3. On utilisera l&#39;induction sur la longueur des dérivations.
+    <br />On montre d&#39;abord que la propriété est vraie pour n = 3, puis par induction pour tout n.
+    <br />
+    <br />Cas de base :
+    <br />Puisque &psi; 
+    <sub>3</sub> a été obtenue par Modus Ponens on a :
+    <br />&psi; 
+    <sub>2</sub>=&psi; 
+    <sub>1</sub>&rarr;&psi; 
+    <sub>3</sub>.
+    <br />Puisque &psi; 
+    <sub>1</sub> et &psi; 
+    <sub>2</sub> n&#39;ont pas été obtenues par Modus Ponens
+    <br />la démonstration précédente s&#39;applique à elles et on a &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>1</sub> et &Gamma;&#8866;&phi;&rarr;(&psi; 
+    <sub>1</sub>&rarr;&psi; 
+    <sub>3</sub>).
+    <br />&phi;&rarr;(&psi; 
+    <sub>1</sub>&rarr;&psi; 
+    <sub>3</sub>) &rarr; (&phi;&rarr;&psi; 
+    <sub>1</sub>) &rarr; (&phi;&rarr;&psi; 
+    <sub>3</sub>) Axiome 2
+    <br />(&phi;&rarr;&psi; 
+    <sub>1</sub>) &rarr; (&phi;&rarr;&psi; 
+    <sub>3</sub>) Modus Ponens
+    <br />(&phi;&rarr;&psi; 
+    <sub>3</sub>) Modus Ponens et donc &Gamma;&#8866;(&phi;&rarr;&psi; 
+    <sub>3</sub>)
+    <br />
+    <br />Hypothèse d&#39;induction :
+    <br />Soit &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>1</sub> ... &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>n-1</sub>.
+    <br />Comme &psi; 
+    <sub>n</sub> a été obtenue par Modus Ponens il existe deux formules &psi; 
+    <sub>i</sub> et &psi; 
+    <sub>j</sub>
+    <br />(i,j &lt; n) telles que &psi; 
+    <sub>j</sub>=&psi; 
+    <sub>i</sub>&rarr;&psi; 
+    <sub>n</sub>.
+    <br />Selon l&#39;hypothèse d&#39;induction on a &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>i</sub> et &Gamma;&#8866;&phi;&rarr;(&psi; 
+    <sub>i</sub>&rarr;&psi; 
+    <sub>n</sub>).
+    <br />On dérive &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>n</sub> comme on l&#39;a fait pour &Gamma;&#8866;&phi;&rarr;&psi; 
+    <sub>3</sub> précédemment :
+    <br />&phi;&rarr;(&psi; 
+    <sub>i</sub>&rarr;&psi; 
+    <sub>n</sub>) &rarr; (&phi;&rarr;&psi; 
+    <sub>i</sub>) &rarr; (&phi;&rarr;&psi; 
+    <sub>n</sub>) Axiome 2
+    <br />(&phi;&rarr;&psi; 
+    <sub>i</sub>) &rarr;(&phi;&rarr;&psi; 
+    <sub>n</sub>) Modus Ponens
+    <br />(&phi;&rarr;&psi; 
+    <sub>n</sub>) Modus Ponens
+    <br />&Gamma;&#8866;(&phi;&rarr;&psi; 
+    <sub>n</sub>) &#8718;.</div>
+  </div>
+  <h3>Exercice 3.12</h3>
+  <div class="paragraph_body">a) Imaginons que notre recette pour démontrer le théorème de la déduction est appliquée
+  aveuglément pour créer une dérivation de &Gamma;&#8866;(&phi;&rarr;&psi;) à partir d&#39;une dérivation
+  &Gamma;,&phi;&#8866;&psi;. Si la recette comporte
+  <br />-n 
+  <sub>1</sub> usages de la règle des hypothèses avec &phi;,
+  <br />-n 
+  <sub>2</sub> usages de la règle avec d&#39;autres formules de &Gamma; différentes de &phi;,
+  <br />-n 
+  <sub>3</sub> usages des axiomes,
+  <br />-n 
+  <sub>4</sub> usages du Modus Ponens.
+  <br />Donnez une formule sur la longueur de la dérivation résultante de &Gamma;&#8866;(&phi;&rarr;&psi;) en fonction de
+  <br />n 
+  <sub>1</sub>, n 
+  <sub>2</sub>, n 
+  <sub>3</sub>, n 
+  <sub>4</sub>.
+  <br />b)</div>
+  <h3>Exercice 3.13</h3>
+  <div class="paragraph_body">Soit &Gamma;&#8866;&phi; 
+  <sub>1</sub>...&phi; 
+  <sub>n</sub>=&phi; une dérivation de &Gamma;&#8866;&phi;.
+  <br />- Si &phi; 
+  <sub>n</sub> a été obtenue comme axiome, alors on a &#8866;&phi; 
+  <sub>n</sub>.
+  <br />- Si &phi; 
+  <sub>n</sub> a été obtenue comme hypothèse, alors &phi; 
+  <sub>n</sub> est un axiome
+  <br />(d&#39;après l&#39;énoncé toutes les hypothèses de &Gamma; sont des axiomes) et donc &#8866;&phi; 
+  <sub>n</sub>.
+  <br />- Si &phi; 
+  <sub>n</sub> a été obtenue par Modus Ponens, n &gt;= 3. On montre par induction sur n que &#8866;&phi; 
+  <sub>n</sub>.
+  <br />Si n = 3, alors &phi; 
+  <sub>1</sub> et &phi; 
+  <sub>2</sub>=&phi; 
+  <sub>1</sub>&rarr;&phi; 
+  <sub>3</sub> sont des axiomes.
+  <br />Puisque &#8866;&phi; 
+  <sub>1</sub> et &#8866;&phi; 
+  <sub>1</sub>&rarr;&phi; 
+  <sub>3</sub> on a &#8866;&phi; 
+  <sub>3</sub> par Modus Ponens.
+  <br />Si n &gt; 3, alors il existe deux formules &phi; 
+  <sub>i</sub> et &phi; 
+  <sub>j</sub> dans la dérivation (i,j &lt; n)
+  <br />telles que &phi; 
+  <sub>j</sub>=&phi; 
+  <sub>i</sub>&rarr;&phi; 
+  <sub>n</sub>.
+  <br />Soit la propriété vraie pour tout k &lt; n, alors &#8866;&phi; 
+  <sub>i</sub> et &#8866;&phi; 
+  <sub>i</sub>&rarr;&phi; 
+  <sub>n</sub>.
+  <br />et donc &#8866;&phi; 
+  <sub>n</sub> par Modus Ponens &#8718;.</div>
+  <h3>Exercice 3.14</h3>
+  <h4>a) (&phi;&rarr;&psi;),(&phi;&rarr;&not;&psi;)&#8866;&not;&phi;</h4>
+  <div class="paragraph_body">(&phi;&rarr;&psi;),(&phi;&rarr;&not;&psi;),&phi;&#8866;&psi; (Modus Ponens H1 et H3).
+  <br />(&phi;&rarr;&psi;),(&phi;&rarr;&not;&psi;),&phi;&#8866;&not;&psi; (Modus Ponens H2 et H3)
+  <br />Conformément aux théorèmes de la preuve par contradiction (avec &Gamma;={(&phi;&rarr;&psi;),(&phi;&rarr;&not;&psi;)} et
+  &phi;=&phi;)
+  <br />on a &Gamma;&#8866;&not;&phi; &#8718;.</div>
+  <h4>b) &#8866;(&phi;&rarr;(&psi;&rarr;(&theta;&rarr;&phi;)))</h4>
+  <div class="paragraph_body">&phi;,&psi;,&theta;&#8866;&phi; (règle des hypothèses)
+  <br />Donc &phi;,&psi;&#8866;(&theta;&rarr;&phi;) (théorème de déduction)
+  <br />Donc &phi;&#8866;(&psi;&rarr;(&theta;&rarr;&phi;)) (théorème de déduction)
+  <br />Donc &#8866;(&phi;&rarr;(&psi;&rarr;(&theta;&rarr;&phi;))) (théorème de la déduction) &#8718;.</div>
+  <h4>c) &#8866;((p&rarr;&not;p)&rarr;p)</h4>
+  <div class="paragraph_body">La formule n&#39;est pas une tautologie.</div>
+  <h4>d) {(p 
+  <sub>i</sub>&rarr;p 
+  <sub>i+1) : i &isin; &#8469;</sub>} &cup; &not;p 
+  <sub>5</sub>&#8866;&not;p 
+  <sub>2</sub></h4>Selon 3.10f p 
+  <sub>i</sub>&rarr;p 
+  <sub>i+1</sub> est équivalent à &not;p 
+  <sub>i+1</sub>&rarr;&not;p 
+  <sub>i</sub>
+  <br />on a donc
+  <br />&not;p 
+  <sub>5</sub>&rarr;&not;p 
+  <sub>4</sub>
+  <br />&not;p 
+  <sub>4</sub>&rarr;&not;p 
+  <sub>3</sub>
+  <br />&not;p 
+  <sub>3</sub>&rarr;&not;p 
+  <sub>2</sub>
+  <br />On infère par Modus Ponens (à partir de &not;p 
+  <sub>5</sub>, hypothèse) &not;p 
+  <sub>4</sub>, puis &not;p 
+  <sub>3</sub> et enfin &not;p 
+  <sub>2</sub> &#8718;.
+  <h3>Exercice 3.15</h3>Soit &Gamma;&#8866;&phi;.
+  <br />Soit &Gamma;&#39; et &phi;&#39; l&#39;ensemble et la formule obtenus en remplaçant toutes les occurrences de p par une
+  formule &theta; dans &Gamma; et &phi;.
+  <br />Montrer que &Gamma;&#8866;&phi;.
+  <div class="paragraph_body">
+  <br />On distingue les cas où &phi; a été obtenue comme axiome, hypothèse ou par Modus Ponens.
+  <br />- Si &phi; est une hypothèse, &phi;&isin;&Gamma; et donc &phi;&#39;&isin;&Gamma;&#39;. On a donc &Gamma;&#8866;&phi;
+  &#8718;.
+  <br />- Si &phi; est un axiome, &phi;&#39; est aussi un axiome, donc &#8866;&phi;&#39; et donc &Gamma;&#8866;&phi; &#8718;.
+  <br />- Si &phi; a été obtenue par Modus Ponens :
+  <br />Dans la dérivation &Gamma;&#8866;&phi; 
+  <sub>1</sub>...&phi; 
+  <sub>n</sub>=&phi; il existe &phi; 
+  <sub>i</sub> et &phi; 
+  <sub>j</sub> telles que
+  <br />&phi; 
+  <sub>j</sub>=&phi; 
+  <sub>i</sub>&rarr;&phi;.
+  <br />(Hypothèse d&#39;induction) on suppose que la propriété est vraie de &phi; 
+  <sub>i</sub> et &phi; 
+  <sub>j</sub>
+  <br />Donc on a &Gamma;&#8866;&phi; 
+  <sub>i</sub> et &Gamma;&#8866;&phi; 
+  <sub>i</sub>&rarr;&phi;&#39;.
+  <br />Par Modus Ponens on infère &Gamma;&#8866;&phi;.
+  <br />Si &phi; a été obtenue par Modus Ponens, la dérivation est de longueur n &gt;= 3.
+  <br />Si n = 3, &phi; 
+  <sub>1</sub> et &phi; 
+  <sub>2</sub> sont des hypothèses ou axiomes
+  <br />auxquelles la démontration précédente s&#39;applique et donc on a &Gamma;&#8866;&phi; 
+  <sub>1</sub> et &Gamma;&#8866;&phi; 
+  <sub>2</sub>,
+  <br />et par Modus Ponens &Gamma;&#8866;&phi; 
+  <sub>3</sub>.
+  <br />Donc &Gamma;&#8866;&phi; &#8718;.</div>
+  <h3>Exercice 3.16</h3>
+  <h4>a) &not;(q&rarr;&not;p)&#8866;((&not;q&rarr;p)&rarr;&not;(q&rarr;&not;p))</h4>
+  <div class="paragraph_body">&not;(q&rarr;&not;p)&rarr;((&not;q&rarr;p)&rarr;&not;(q&rarr;&not;p)) Axiome 1
+  <br />&not;(q&rarr;&not;p) Hypothèse
+  <br />(&not;q&rarr;p)&rarr;&not;(q&rarr;&not;p) Modus Ponens 1,2</div>
+  <h4>b) &#8866;p&rarr;(p&rarr;&not;r)&rarr;(q&rarr;r)</h4>
+  <div class="paragraph_body">Non dérivable (ex. v(p)=T v(q)=T v(r)=F)</div>
+  <h4>c) {(p 
+  <sub>i</sub>&rarr;p 
+  <sub>i+1</sub>) : i &isin; &#8469;} &#8866; p 
+  <sub>3</sub></h4>
+  <div class="paragraph_body">Non dérivable. (ex. v(p 
+  <sub>3</sub>)=F).</div>
+  <h4>d) { (p 
+  <sub>i</sub>&rarr;p 
+  <sub>i+1</sub>) : i &isin; &#8469;} &#8866; p 
+  <sub>2</sub>&rarr;p 
+  <sub>4</sub></h4>
+  <div class="paragraph_body">p 
+  <sub>2</sub>&rarr;p 
+  <sub>3</sub>
+  <br />p 
+  <sub>3</sub>&rarr;p 
+  <sub>4</sub>
+  <br />selon 3.10c :p 
+  <sub>2</sub>&rarr;p 
+  <sub>4</sub></div>
+  <h4>e) { (p 
+  <sub>i</sub>&rarr;p 
+  <sub>i+1</sub>) : i &isin; &#8469;} &#8866; p 
+  <sub>4</sub>&rarr;p 
+  <sub>2</sub></h4>
+  <div class="paragraph_body">Non dérivable.</div>
+  <h3>Exercice 3.17</h3>
+  <div class="paragraph_body">Montrer que l&#39;ensemble :
+  <br />&Gamma; = { &not;(p&rarr;q),&not;(q&rarr;r)} est inconsistant.
+  <div class="paragraph_body">Selon 3.7f : &not;q&#8866;(q&rarr;r) et selon le lemme de 3.10f [si &Gamma;,&phi;&#8866;&psi; alors
+  &Gamma;,&not;&psi;&#8866;&not;&phi;]
+  <br />&not;(q&rarr;r)&#8866;&not;&not;q
+  <br />&not;&not;q&#8866;q
+  <br />&not;(q&rarr;r)&#8866;q
+  <br />&Gamma;&#8866;q
+  <br />D&#39;autre part :
+  <br />&not;(p&rarr;q)&#8866;&not;q
+  <br />q&#8866;(p&rarr;q) (par axiome 1 et Modus Ponens)
+  <br />&not;(p&rarr;q)&#8866;&not;q
+  <br />Donc &Gamma;&#8866;&not;q, c&#39;est-à-dire que &Gamma; est inconsistant &#8718;.</div></div>
+  <h3>Théorème 3.6</h3>Montrer que pour tout ensemble &Gamma; et tout formule &phi;, &Gamma;,&not;&phi; est consistant si et
+  seulement si &Gamma;
+  <h3>Exercice 3.18</h3>
+  <h4>a) 2e partie de la preuve du théorème 3.6</h4>
+  <div class="paragraph_body">Montrer que si &Gamma;&#8866;&phi; alors &Gamma;,&not;&phi; est inconsistant.
+  <br />On sait que &Gamma;,&not;&phi;&#8866;&not;&phi;
+  <br />Comme &Gamma;&#8866;&phi; alors &Gamma;,&not;&phi;&#8866;&phi; (3.1ii)
+  <br />Comme on a à la fois &Gamma;,&not;&phi;&#8866;&phi; et &Gamma;,&not;&phi;&#8866;&phi; et donc &Gamma;,&not;&phi; est
+  inconsistant.</div>
+  <h4>b) Soit &Gamma; consistant et &Gamma;&#8866;&phi;. Montrer que &Gamma;,&phi; est consistant.</h4>
+  <div class="paragraph_body">On suppose que &Gamma; est consistant et que &Gamma;&#8866;&phi;.
+  <br />Alors &Gamma;,&phi; est consistant.
+  <br />En effet si &Gamma;,&phi; était inconsistant, il existe une formule telle que
+  <br />Si &Gamma;,&phi;&#8866;&psi; et &Gamma;,&phi;&#8866;&not;&psi;
+  <br />Selon le théorème de la déduction :
+  <br />&Gamma;&#8866;&phi;&rarr;&psi; et &Gamma;&#8866;&phi;&rarr;&not;&psi;.
+  <br />Donc &Gamma;&#8866;&psi; et &Gamma;&#8866;&not;&psi; (Modus Ponens)
+  <br />et donc &Gamma; est inconsistant, contrairement l&#39;hypothèse.
+  <br />Donc &Gamma;,&phi; est consistant &#8718;.</div>
+  <h3>Exercice 3.19</h3>
+  <h4>Montrer que les deux assertions suivantes sont équivalentes :</h4>
+  <h3>Exercice 3.20</h3>
+  <h4>Déterminez quels ensembles sont consistants parmi les suivants et expliquez pourquoi.</h4>
+  <h4>a) (p&rarr;q),(q&rarr;r),(r&rarr;&not;p)</h4>
+  <div class="paragraph_body">L&#39;ensemble est satisfaisable, par exemple v(p)=F,v(q)=T,v(r)=T. Donc selon 3.7b il est
+  consistant.</div>
+  <h4>b) &not;(p&rarr;q),q</h4>L&#39;ensemble est inconsistant :
+  <br />q&rarr;(p&rarr;q) Axiome 1
+  <br />q Hypothèse 2
+  <br />(p&rarr;q) Modus Ponens
+  <br />et par ailleurs :
+  <br />&not;(p&rarr;q) Hypothèse 1.
+  <h3>Exercice 3.21</h3>
+  <h4>Montrer que les deux assertions suivantes sont équivalentes</h4>
+  <div class="paragraph_body">(C) Pour tout &Gamma;, &phi; si &Gamma;&#8872;&phi;, alors &Gamma;&#8866;&phi;.
+  <br />(D) Pour tout &Delta;, si &Delta; est consitant &Delta; est satisfaisable.
+  <div class="paragraph_body">Si (C) alors (D) (p. 106) Montrer que si (D) alors (C). On montre que si &Gamma;&#8876;&phi; alors
+  &Gamma;&#8878;&phi;.
+  <br />Si &Gamma;&#8876;&phi; alors &Gamma;,&not;&phi; est consistant (Th. 3.6a). Donc selon (D) &Gamma;,&not;&phi; est
+  satisfaisable. Soit une valuation v satisaisant &Gamma;,&not;&phi;, donc v(&Gamma;) = T et v(&phi;) = F ce qui est la définition
+  de &Gamma;&#8878;&phi; &#8718;.</div></div>
+  <h3>Exercice 3.22</h3>
+  <h4>Soit {&phi; 
+  <sub>i</sub> : i &isin;&#8469;} tel que toute valuation rend au moins un &phi; 
+  <sub>i</sub> vrai.
+  <br />Montrer qu&#39;il existe n &isin; &#8469; tel que toute valuation rend au moins un &phi; 
+  <sub>i</sub> vrai dans &phi; 
+  <sub>0</sub>...&phi; 
+  <sub>n</sub></h4>
+  <div class="paragraph_body">Puisque toute valuation rend au moins un &phi; 
+  <sub>i</sub> vrai, {&not;&phi; 
+  <sub>i</sub> : i &isin;&#8469;} n&#39;est pas satisfaisable.
+  <br />Donc selon le théorème de la compacité il existe un sous-ensemble fini &Delta; inclus dans {&not;&phi; 
+  <sub>i</sub> : i &isin;&#8469;} qui n&#39;est pas satisfaisable.
+  <br />Soit N le plus grand indice des formules de &Delta;. &Delta; est inclus dans {&not;&phi; 
+  <sub>0</sub>...&not;&phi; 
+  <sub>N</sub>}, qui n&#39;est pas satisfaisable (puisque &Delta; ne l&#39;est pas.)
+  <br />Donc toute valuation satisfait au moins un &phi; 
+  <sub>i</sub> dans {&phi; 
+  <sub>0</sub>...&phi; 
+  <sub>n</sub>}.</div>
+  <div style="margin-bottom: 10%"></div></body>
+</html>

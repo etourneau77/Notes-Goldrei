@@ -1,0 +1,567 @@
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Notes Goldrei</title>
+      <style type="text/css">
+         <!--
+            body {
+            	margin-left: 5%;
+            	font-size: 1em;
+            	font-family: Verdana, sans-serif;
+            	width: 80%;
+            }
+            
+            .bold_italic {
+            	font: italic bold 1em Georgia, serif;
+            }
+            
+            .italic {
+            	font: italic normal 1em Verdana, sans-serif;
+            }
+            
+            h5 {
+            	font-size: 1.2em;
+            }
+            
+            h6 {
+            	font-size: 1.1em;
+            }
+            -->
+      </style>
+   </head>
+   <body lang="fr-fr">
+      <h2>Notes sur : Derek Goldrei, Propositional and predicate calculus.</h2>
+      <h3>
+         Th&eacute;or&egrave;me de la validit&eacute; (<span class="italic">soundness</span>) du
+         calcul propositionnel
+      </h3>
+      <br/> Soit &phi; une formule et &Gamma; un ensemble de formules.
+      Montrer que si &Gamma;&#8866;&phi; alors &Gamma;&#8872;&phi;.
+      <br/> Soit d
+      <sub>1</sub>,d
+      <sub>2</sub>...d
+      <sub>n </sub>=&phi; les &eacute;tapes de la d&eacute;rivation de &Gamma;&#8872;&phi;.
+      Soit v une valuation satisfaisant &Gamma;. On montre que v satisfait
+      &phi;.
+      <br/> (cas de base) La premi&egrave;re ligne d
+      <sub>1</sub> a &eacute;t&eacute; obtenue soit comme hypoth&egrave;se (d
+      <sub>1</sub> &isin;&Gamma;) soit comme axiome. Si d
+      <sub>1</sub> &isin;&Gamma; alors v satisfait d
+      <sub>1</sub>. Si d
+      <sub>1</sub> est un axiome alors c'est aussi une tautologie, toute
+      valuation satisfait d
+      <sub>1</sub> et v satisfait d
+      <sub>1</sub>.
+      <br/> (hypoth&egrave;se d'induction) Si pour tout k &lt; n v satisfait d
+      <sub>k</sub> alors v satisfait &phi;. Si &phi; a &eacute;t&eacute; obtenue comme
+      hypoth&egrave;se ou axiome alors v satisfait &phi; (même preuve que pour d
+      <sub>1</sub>). Si &phi; a &eacute;t&eacute; obtenue par application du Modus Ponens
+      alors il existe des formules ant&eacute;rieures dans la d&eacute;rivation d
+      <sub>i</sub> et d
+      <sub>j</sub> telles que d
+      <sub>j</sub>= d
+      <sub>i</sub>&rarr;&phi;. Puisque v satisfait d
+      <sub>i </sub>et d
+      <sub>j</sub> v satisfait &phi;&#8718;.
+      <br/>
+      <h3>Consistance d'un ensemble de formules</h3>
+      Un ensemble &Gamma; de formules est dit
+      <span class="italic">consistant</span> s'il n'existe pas de formule
+      &phi; telle que &Gamma;&#8866;&phi; et &Gamma;&#8866;&not;&phi;. Il est
+      dit
+      <span class="italic">inconsistant</span> s'il existe une telle formule.
+      <br/>
+      <h4>Th&eacute;or&egrave;me 3.5</h4>
+      <span class="bold_italic">Un ensemble &Gamma; de formules est
+      consistant si et seulement si il existe une formule &phi; non
+      d&eacute;rivable de &Gamma; (telle que &Gamma;&#8876;&phi;).</span>
+      <br/><br/> Preuve:
+      <span class="italic"><br/> <br/> Si &Gamma; est
+      consistant alors il existe &phi; telle que &Gamma;&#8876;&phi;.</span>
+      <br/> En effet si &Gamma; est consistant il n'y a pas de formule
+      &chi; pour laquelle &Gamma;&#8866;&chi; et &Gamma;&#8866;&not;&chi;.
+      <br/> Si &chi; n'est pas d&eacute;rivable, (&Gamma;&#8876;&chi;), &chi;
+      est l'exemple recherch&eacute;, et si &chi; est d&eacute;rivable
+      (&Gamma;&#8866;&chi;) alors &Gamma;&#8876;&not;&chi; (consistance
+      de&nbsp;&Gamma;) et donc &not;&chi; est l'exemple recherch&eacute;.
+      <br/>
+      <br/>
+      <span class="italic">S'il existe &phi; telle que
+      &Gamma;&#8876;&phi; alors &Gamma; est consistant.</span>
+      <br/> On montre la contrapos&eacute;e : si &Gamma; est inconsistant, il
+      n'existe pas de formule &phi; telle que &Gamma;&#8876;&phi;.
+      <br/> En effet si &Gamma;&eacute;tait inconsistant on aurait une formule
+      &chi; telle que &Gamma;&#8866;&chi; et &Gamma;&#8866; &not;&chi;.
+      <br/> On sait que (Ex. 3.7f) pour toutes formules &psi; et
+      &theta;&not;&psi;&#8866;&psi;&rarr;&theta;
+      <br/> [&not;&psi;&rarr;(&not;&theta;&rarr;&not;&psi;) Ax1
+      <br/> &not;&psi; hypoth&egrave;se
+      <br/> (&not;&theta;&rarr;&not;&psi;) MP
+      <br/> (&not;&theta;&rarr;&not;&psi;)&rarr;(&psi;&rarr;&theta;) Ax3
+      <br/> &psi;&rarr;&theta; MP]
+      <br/> Donc &not;&chi;, &chi;&#8866; (&chi;&rarr;&phi;)&#8866;&phi;
+      Si &Gamma; est inconsistant, on a &Gamma;&#8866;&phi; pour TOUTE
+      formule &phi;. Comme par hypoth&egrave;se &Gamma;&#8876;&phi;, &Gamma; est
+      consistant &#8718;.
+      <h4>Th&eacute;or&egrave;me 3.6</h4>
+      <span class="bold_italic"> a) Pour tout ensemble de formules
+      &Gamma; et toute formule &phi;, &Gamma;,&not;&phi; est consistant si
+      et seulement si &Gamma;&#8876;&phi; <br/> b) Si &Gamma; est
+      consistant et &Gamma;&#8866;&phi; alors &Gamma;,&phi; est consistant.
+      <br/>
+      </span>
+      <br/> Preuve:
+      <br/>
+      <span class="italic"> <br/> a1) Si &Gamma;&#8876;&phi; alors
+      &Gamma;,&not;&phi; est consistant.
+      </span>
+      <br/>
+      <br/> La proposition est &eacute;quivalente &agrave; : si &Gamma;,&not;&phi; est
+      inconsistant alors &Gamma;&#8866;&phi;.
+      <br/> En effet, si &Gamma;,&not;&phi; est inconsistant, pour toute
+      formule &chi; on a &Gamma;,&not;&phi;&#8866;&chi;, et donc aussi
+      &Gamma;,&not;&phi;&#8866;&phi; et donc selon le th&eacute;or&egrave;me de la
+      d&eacute;duction &Gamma;&#8866;&not;&phi;&rarr;&phi;. Comme on a
+      &not;&phi;&rarr;&phi;&#8866;&phi; [selon 3.7f
+      &not;&psi;&#8866;&psi;&rarr;&theta;, donc
+      &not;&psi;,&psi;&#8866;&theta; et donc &psi;&#8866;&theta; par MP.
+      <br/> En appliquant 2 fois le th&eacute;or&egrave;me de la d&eacute;duction on obtient:
+      <br/> &#8866;&not;&psi;&rarr;(&psi;&rarr;&theta;)
+      <br/> &not;&psi;&rarr;(&psi;&rarr;&theta;) &rarr;
+      (&not;&psi;&rarr;&psi;) &rarr; (&not;&psi;&rarr;&theta;) Ax2
+      <br/> (&not;&psi;&rarr;&psi;) &rarr; (&not;&psi;&rarr;&theta;) MP
+      <br/> si on prend &psi;=&phi;
+      <br/> (&not;&phi;&rarr;&phi;) &rarr; (&not;&phi;&rarr;&theta;)
+      <br/> (&not;&phi;&rarr;&phi;) hypoth&egrave;se
+      <br/> (&not;&phi;&rarr;&theta;) MP
+      <br/> soit &theta; = &not;(&not;&phi;&rarr;&phi;)
+      <br/> &not;&phi;&rarr;&not;(&not;&phi;&rarr;&phi;)
+      <br/> &not;&phi;&rarr;&not;(&not;&phi;&rarr;&phi;) &rarr;
+      (&not;&phi;&rarr;&phi;) &rarr;&phi; Ax3
+      <br/> (&not;&phi;&rarr;&phi;) &rarr; &phi; MP
+      <br/> (&not;&phi;&rarr;&phi;) hypoth&egrave;se
+      <br/> &phi; MP ] alors &Gamma;&#8866;&phi;&#8718;.
+      <br/>
+      <span class="italic"> <br/> a2) Si &Gamma;,&not;&phi; est
+      consistant alors &Gamma;&#8876;&phi;. <br/>
+      </span>
+      <br/> La proposition est &eacute;quivalente &agrave; : si &Gamma;&#8866;&phi;
+      alors &Gamma;,&not;&phi; est inconsistant.
+      <br/> Si &Gamma;&#8866;&phi; alors &Gamma;,&not;&phi;&#8866;&phi;
+      et aussi &Gamma;,&not;&phi;&#8866;&not;&phi; (r&egrave;gle des hypoth&egrave;ses),
+      &Gamma;,&not;&phi; est inconsistant &#8718;.
+      <br/>
+      <br/>
+      <span class="bold_italic">Si &Gamma; est consistant et
+      &Gamma;&#8866;&phi; alors &Gamma;,&phi; est consistant.</span>
+      <br/> Supposons que &Gamma;,&phi; est inconsistant. Alors il existe
+      une formule &chi; telle que &Gamma;,&phi;&#8866;&chi; et
+      &Gamma;,&phi;&#8866;&not;&chi;, et donc aussi
+      &Gamma;&#8866;&phi;&rarr;&chi; et &Gamma;&#8866; &phi;&rarr;&not;&chi;
+      (th&eacute;or&egrave;me de la d&eacute;duction). Comme on a par hypoth&egrave;se
+      &Gamma;&#8866;&phi;, en appliquant le Modus Ponens avec
+      &Gamma;&#8866;&phi;&rarr;&chi; on obtient &Gamma;&#8866;&chi;. De la
+      même fa&agrave;§on avec &Gamma;&#8866; &phi; et
+      &Gamma;&#8866;&phi;&rarr;&not;&chi; on obtient &Gamma;&#8866;
+      &not;&chi;. Puisque &Gamma;&#8866;&chi; et &Gamma;&#8866;&not;&chi;,
+      &Gamma; serait inconsistant contrairement &agrave;  l'hypoth&egrave;se. Donc
+      &Gamma;,&phi; est consistant &#8718;.
+      <h4>Th&eacute;or&egrave;me 3.7</h4>
+      <span class="bold_italic">Les deux assertions suivantes sont
+      &eacute;quivalentes: <br/> a) Pour tout ensemble de formules &Gamma; et
+      toute formule &phi; si &Gamma;&#8866;&phi; alors &Gamma;&#8872;&phi;.
+      <br/> b) Pour tout ensemble de formules &Delta; si &Delta; est
+      satisfaisable alors &Delta; est consistant.
+      </span>
+      <br/>
+      <br/> Preuve:
+      <span class="italic"><br/> <br/> Si a alors b:</span> (exercice
+      3.19) on montre la contrapos&eacute;e:
+      <span class="italic">Si &Delta; est inconsistant alors il n'est
+      pas satisfaisable.</span> Si &Delta; est inconsistant il existe une formule
+      &chi; telle que: &Delta;&#8866;&chi; et &Delta;&#8866;&not;&chi;
+      <br/> Donc conform&eacute;ment &agrave;  "a" nous avons: &Delta;&#8872;&chi; et
+      &Delta;&#8872;&not;&chi; Par d&eacute;finition de &#8872;, cela signifie que
+      toute valuation satisfaisant &Delta; satisfait &agrave;  la fois &chi; et
+      &not;&chi;, ce qui est impossible selon la d&eacute;finition de &not;. Donc
+      comme aucune valuation ne satisfait &Delta;, &Delta; n'est pas
+      satisfaisable&nbsp;&#8718;.
+      <br/>
+      <br/>
+      <span class="italic">Si b alors a:</span> (preuve p.104) on montre la
+      contrapos&eacute;e:
+      <span class="italic">Si &Gamma;&#8877;&phi; alors
+      &Gamma;&#8876;&phi;</span> Si &Gamma;&#8877;&phi; il existe une valuation v
+      satisfaisant &Gamma; et ne satisfaisant pas &phi;.
+      <br/> Donc v satisfait &Gamma;,&not;&phi;.
+      <br/> Donc conform&eacute;ment &agrave;  b, &Gamma;,&not;&phi; &eacute;tant
+      satisfaisable, est consistant. De par le th&eacute;or&egrave;me 3.6a nous pouvons en
+      conclure &Gamma;&#8876;&phi;&#8718;.
+      <h4>Th&eacute;or&egrave;me 3.8</h4>
+      <span class="bold_italic">Le syst&egrave;me S est consistant.</span> Le
+      th&eacute;or&egrave;me de la validit&eacute; (soundness) montre que si on a
+      &Delta;&#8866;&phi; alors &Delta;&#8872;&phi; pour tout &Delta; et
+      &phi;. Le th&eacute;or&egrave;me 3.7 montre qu'il est &eacute;quivalent &agrave;  : si &Delta; est
+      satisfaisable alors &Delta; est consistant. Soit &Delta; l'ensemble
+      vide. Toute valuation satisfait &Delta;, donc &Delta; est satisaisable
+      et conform&eacute;ment au th&eacute;or&egrave;me 3.7, &Delta;, l'ensemble vide, est
+      consistant.
+      <h4>Th&eacute;or&egrave;me 3.9 (Compl&eacute;tude)</h4>
+      <span class="bold_italic">Pour tout ensemble de formules &Gamma;
+      et toute formule &phi;, si &Gamma;&#8872;&phi; alors
+      &Gamma;&#8866;&phi;.</span> Ceci signifie que si toute valuation satisfaisant
+      &Gamma; satisfait &phi; il existe une d&eacute;rivation de
+      &Gamma;&#8866;&phi;.
+      <h4>Th&eacute;or&egrave;me 3.10</h4>
+      <span class="bold_italic">Les deux assertions suivantes sont
+      &eacute;quivalentes: <br/> a) Pour tout ensemble de formules &Gamma; et
+      toute formule &phi;, si &Gamma;&#8872;&phi; alors &Gamma;&#8866;&phi;.
+      <br/> b) Pour tout ensemble de formules &Delta;, si &Delta; est
+      consistant alors il est satisfaisable.
+      </span>
+      <br/> Preuve:
+      <br/>
+      <span class="italic">Si a alors b:</span> (preuve p.106) on montre la
+      contrapos&eacute;e: si &Delta; n'est pas satisfaisable il est inconsistant. Si
+      aucune valuation ne satisfait &Delta;, toute valuation satisfaisant
+      &Delta; satisfait toute formule et sa n&eacute;gation. On a donc pour toute
+      formule &chi;: &Delta;&#8872;&chi; et &Delta;&#8872;&not;&chi;, et
+      conform&eacute;ment &agrave;  "a": &Delta;&#8866;&chi; et &Delta;&#8866;&not;&chi;
+      c'est-&agrave; -dire que &Delta; est inconsistant.
+      <br/>
+      <span class="italic">Si b alors a:</span> (exercice 3.21) on montre la
+      contrapos&eacute;e: Pour tout &Gamma; et &phi;, si &Gamma;&#8876; &phi; alors
+      &Gamma;&#8877;&phi;. Si &Gamma;&#8876;&phi; alors &Gamma;,&not;&phi;
+      est consistant (th&eacute;or&egrave;me 3.6) et donc il est satisfaisable
+      (conform&eacute;ment &agrave;  b), c'est-&agrave; -dire qu'il existe une valuation v
+      satisfaisant &Gamma; et &not;&phi;. Comme v ne satisfait pas &phi;
+      (puisqu'elle satisfait &not;&phi;) on a &Gamma;&#8877;&phi;&#8718;.
+      <h4>Ensembles complets, maximal-consistants.</h4>
+      Soit v une valuation. Soit &Sigma;
+      <sub>v</sub> l'ensemble des formules satisfaites par v. &Sigma;
+      <sub>v</sub> est consistant de par le th&eacute;or&egrave;me de la validit&eacute;. Soit
+      &Sigma; un ensemble de formules. Si pour tout formule &phi; on a soit
+      &phi;&isin;&Sigma; soit &not;&phi;&isin;&Sigma; (mais pas les deux) on
+      dit que &Sigma; est
+      <span class="italic">complet</span>.
+      <br/> Si &Sigma; est consistant et que pour tout ensemble
+      consistant &Sigma;
+      <sup>&prime;</sup> si &Sigma;&sube;&Sigma;
+      <sup>&prime;</sup> alors &Sigma;
+      <sup>&prime;</sup>=&Sigma;, on dit que &Sigma; est
+      <span class="italic">maximal-consistant</span>.
+      <h4>Th&eacute;or&egrave;me 3.12</h4>
+      <span class="bold_italic"> Un ensemble de formules &Sigma; est
+      complet si et seulement si il est maximal-consistant. </span>
+      <br/> Preuve :
+      <br/>
+      <br/>
+      <span class="italic">a) Si &Sigma; est complet alors il est
+      maximal-consistant.</span>
+      <br/>
+      <br/> (exercice 3.24)
+      <br/> Soit &Sigma;
+      <sup>&prime;</sup> un ensemble consistant avec &Sigma;&sube;&Sigma;
+      <sup>&prime;</sup>. Supposons que &Sigma;&ne;&Sigma;
+      <sup>&prime;</sup> donc il existe une formule &phi; telle que
+      &phi;&isin;&Sigma;
+      <sup>&prime;</sup> et &phi;&notin;&Sigma;. Comme &Sigma; est complet on
+      a &not;&phi;&isin;&Sigma; , et donc on aurait &not;&phi;&isin;&Sigma;
+      <sup>&prime;</sup> ET &phi;&isin;&Sigma;
+      <sup>&prime;</sup>. &Sigma;
+      <sup>&prime;</sup> serait inconsistant. Donc a bien &Sigma;=&Sigma;
+      <sup>&prime;</sup> &#8718;.
+      <br/>
+      <br/>
+      <span class="italic">b) Si &Sigma; est maximal-consistant alors
+      il est complet.</span>
+      <br/>
+      <br/> Preuve :
+      <br/> (p.109)
+      <br/> Soit &phi; une formule, on montre que soit &phi;&isin;&Sigma;
+      et &not;&phi;&notin;&Sigma;, soit&nbsp;&phi;&notin;&Sigma; et
+      &not;&phi;&isin;&Sigma;.
+      <br/> a) Soit &Sigma;,&not;&phi; consistant, donc
+      &Sigma;,&not;&phi;=&Sigma; puisque &Sigma; est maximal-consistant, et
+      donc &not;&phi;&isin;&Sigma;. &Sigma; &eacute;tant consistant,
+      &phi;&notin;&Sigma;.
+      <br/> b) Soit &Sigma;,&not;&phi; inconsistant, selon le th&eacute;or&egrave;me
+      3.6a, on a &Sigma;&#8866;&phi;, et d'apr&egrave;s le même th&eacute;or&egrave;me
+      &Sigma;,&phi; est consistant.
+      <br/> &Sigma; &eacute;tant maximal-consistant on a &Sigma;=&Sigma;,&phi;
+      et donc &phi;&isin;&Sigma;, et aussi &not;&phi;&notin;&Sigma; &#8718;.
+      <h4>Th&eacute;or&egrave;me 3.13</h4>
+      <span class="bold_italic"> Soit &Sigma; un ensemble complet de
+      formules pour le langage L. <br/> Pour toute variable
+      propositionnelle p de L, soit v la valuation d&eacute;finie par : <br/>
+      v(p) = T si p&isin;&Sigma; <br/> v(p) = F si &not;p&isin;&Sigma; <br/>
+      v est la seule valuation satisfaisant &Sigma;.
+      </span>
+      <br/> Preuve :
+      <br/> On montre par induction que pour toute formule &phi; de L
+      v(&phi;)=T si et seulement si &phi;&isin;&Sigma;.
+      <br/> Par d&eacute;finition de v, la propri&eacute;t&eacute; est vraie pour les formules
+      atomiques puisque v(p)=T si et seulement si p&isin;&Sigma;.
+      <br/> Pour les formules compos&eacute;es,
+      <br/> soit &phi; une telle formule, &phi; peut être de la forme
+      &not;&chi; ou &chi;&rarr;&theta;. On veut montrer que
+      <br/> Si v(&phi;)=T alors &phi;&isin;&Sigma; et si v(&phi;)=F alors
+      &phi;&notin;&Sigma;
+      <ol>
+         <li>Si &phi;=&not;&chi; :<br/> <span
+            style="font-size: 0.9em;"> <span class="italic">a1)
+            Soit v(&phi;)=T.</span> <br/> Donc v(&chi;)=F. La propri&eacute;t&eacute; &eacute;tant
+            suppos&eacute;e vraie de &chi; on a &chi;&notin;&Sigma;. et donc par
+            compl&eacute;tude de &Sigma; on a &not;&chi;&isin;&Sigma;, et puisque
+            &not;&chi; n'est autre que &phi; on a bien
+            &phi;&isin;&Sigma;&#8718;. <br/> <span class="italic">a2)
+            Soit v(&phi;)=F.</span> <br/> Donc v(&chi;)=T, et la propri&eacute;t&eacute; &eacute;tant
+            suppos&eacute;e vraie de &chi;, &chi;&isin;&Sigma;, et donc par consistance
+            de &Sigma; &not;&chi;&notin;&Sigma;, et puisque &not;&chi; n'est
+            autre que &phi; on a bien &phi;&notin;&Sigma;&#8718;. <br/> <br/>
+            <span class="italic">b1) Soit &phi;&isin;&Sigma;</span> <br/>
+            c'est-&agrave; -dire &not;&chi;&isin;&Sigma;. Par consistance de &Sigma; on
+            a alors &chi;&notin;&Sigma;, et comme la propri&eacute;t&eacute; est suppos&eacute;e
+            vraie de &chi;, v(&chi;)=F, c'est-&agrave; -dire v(&phi;)=T &#8718;. <br/>
+            <span class="italic">b2) Soit &phi;&notin;&Sigma;</span> <br/>
+            c'est-&agrave; -dire &not;&chi;&notin;&Sigma;. Par compl&eacute;tude de &Sigma; on
+            a donc &chi;&isin;&Sigma; et comme la propri&eacute;t&eacute; est suppos&eacute;e vraie
+            de &chi; v(&chi;)=T, ou encore v(&not;&chi;)=F, puisque &not;&chi;
+            est &phi; on a bien v(&phi;)=F &#8718;. <br/> <br/></span>
+         </li>
+         <li>Si &phi;=&chi;&rarr;&theta; :<br/> <span
+            style="font-size: 0.9em;"> <span class="italic"> a1)
+            Soit v(&phi;)=T<br/>
+            </span> Cela signifie que v(&chi;)=F, ou que v(&theta;)=T. La propri&eacute;t&eacute; est
+            suppos&eacute;e vraie de &chi;. <br/> Si v(&chi;)=F on a
+            &chi;&notin;&Sigma; et donc &not;&chi;&isin;&Sigma;. Comme par 3.7f
+            on a &not;&chi;&#8866;&chi;&rarr;&theta; et donc
+            &not;&chi;&#8866;&phi;, donc &Sigma;&#8866;&phi;. Par la consistance
+            de &Sigma; on ne peut avoir &not;&phi;&isin;&Sigma; et donc on a de
+            par la compl&eacute;tude de &Sigma; : &phi;&isin;&Sigma; &#8718;. <br/>
+            Si v(&theta;)=T, la propri&eacute;t&eacute; &eacute;tant suppos&eacute;e vraie de &theta; on a
+            &theta;&isin;&Sigma;. Comme on a &theta;&#8866;&chi;&rarr;&theta; <br/>
+            [&theta;&rarr;(&chi;&rarr;&theta;) Ax1 <br/> &theta; hypoth&egrave;se <br/>
+            (&chi;&rarr;&theta;) MP ] <br/> on a donc
+            &Sigma;&#8866;(&chi;&rarr;&theta;) c'est-&agrave; -dire
+            &Sigma;&#8866;&phi;, la consistance et compl&eacute;tude de &Sigma;
+            entrainent &phi;&isin;&Sigma; comme pr&eacute;c&eacute;demment &#8718;. <br/>
+            <span class="italic"> <br/> a2) Soit v(&phi;)=F
+            </span><br/> Cela signifie que v(&chi;)=T et v(&theta;)=F. La propri&eacute;t&eacute;
+            &eacute;tant suppos&eacute;e vraie de &chi; et &theta; il suit :
+            &chi;&isin;&Sigma; et &theta;&notin;&Sigma;, et donc
+            &chi;&isin;&Sigma; et &not;&theta;&isin;&Sigma;. <br/> Mais si
+            on avait &phi;&isin;&Sigma; on pourrait par MP d&eacute;river
+            &Sigma;&#8866;&theta; <br/> [&chi; hypoth&egrave;se <br/>
+            &chi;&rarr;&theta; hypoth&egrave;se <br/> &theta; MP] <br/> et donc
+            &Sigma; serait inconsistant. Donc il est faux que &phi;&isin;&Sigma;
+            mais comme &Sigma; est complet il suit que &not;&phi;&isin;&Sigma;
+            &#8718;. <br/></span> <span style="font-size: 0.9em;"> <span
+               class="italic"> <br/> b1) Soit &phi;&isin;&Sigma;
+            </span> <br/> Si &chi;&isin;&Sigma;, on a &Sigma;&#8866;&theta; (par MP)
+            et donc &theta;&isin;&Sigma; (consistance et compl&eacute;tude de &Sigma;).
+            La propri&eacute;t&eacute; &eacute;tant suppos&eacute;e vraie pour &chi; et &theta; on a
+            v(&chi;)=v(&theta;)=T. Donc v(&phi;)=T (table de v&eacute;rit&eacute;) &#8718;. <br/>
+            Si &chi;&notin;&Sigma;, alors v(&chi;)=F (la propri&eacute;t&eacute; est suppos&eacute;e
+            vraie pour &chi;) donc v(&chi;&rarr;&theta;)=T (table de v&eacute;rit&eacute; de
+            &rarr;) c'est-&agrave; -dire v(&phi;)=T &#8718;.<br/> <span
+               class="italic"> <br/> b2) Soit &phi;&notin;&Sigma;
+            </span> <br/> On montrera d'abord que &chi;&isin;&Sigma; et
+            &theta;&notin;&Sigma;. <br/> Supposons que &chi;&notin;&Sigma;,
+            on aurait v(&chi;)=F (la propri&eacute;t&eacute; est suppos&eacute;e vraie de &chi;) et
+            donc v(&chi;&rarr;&theta;)=T, donc v(&phi;)=T et donc
+            &phi;&isin;&Sigma; contrairement &agrave;  l'hypoth&egrave;se. <br/> Donc
+            &chi;&isin;&Sigma;. <br/> Ensuite supposons que
+            &theta;&isin;&Sigma;, on aurait donc v(&theta;)=T et pareillement
+            v(&chi;&rarr;&theta;)=T c'est-&agrave; -dire v(&phi;)=T et donc
+            &phi;&isin;&Sigma; contrairement &agrave;  l'hypoth&egrave;se. <br/> Donc
+            &theta;&notin;&Sigma; et la propri&eacute;t&eacute; &eacute;tant vraie de &theta;, on a
+            v(&theta;)=F. <br/> Or &chi;&isin;&Sigma; entraine que
+            v(&chi;)=T. <br/> Si v(&chi;)=T et v(&theta;)=F,
+            v(&chi;&rarr;&theta;)=F (table de v&eacute;rit&eacute;) et donc v(&phi;)=F
+            &#8718;. <br/></span>
+         </li>
+      </ol>
+      <h4>Th&eacute;or&egrave;me de la compl&eacute;tude</h4>
+      <span class="bold_italic">Pour tout ensemble
+      de formules &Gamma; et toute formule &phi;, si &Gamma;&#8872;&phi;
+      alors &Gamma;&#8866;&phi;.
+      <br/> Selon 3.10 cet &eacute;nonc&eacute; est &eacute;quivalent &agrave;  : 
+      Pour tout ensemble de formules
+      &Gamma;, si &Gamma; est consistant il est satisfaisable. </span>	
+      <br/> Preuve : l'ensemble des formules de L est &eacute;num&eacute;rable dans une
+      suite : &phi;
+      <sub>0</sub>, &phi;
+      <sub>1</sub>...&phi;
+      <sub>n</sub>.
+      <br/> Si &Gamma; est un ensemble consistant, il existe un ensemble &Sigma; d&eacute;fini comme l'union infinie d'ensembles  
+      &Sigma;<sub>0</sub>,
+      &Sigma;<sub>1</sub>,...,&Sigma;<sub>n</sub> d&eacute;finis r&eacute;cursivement selon la r&egrave;gle suivante :
+      <br/> &Sigma;
+      <sub>0</sub>=&Gamma;
+      <br/> Pour tout n &gt; 0 :
+      <br/> Si &Sigma;
+      <sub>n</sub>&#8866;&phi;
+      <sub>n</sub>, &Sigma;
+      <sub>n+1</sub>=&Sigma;
+      <sub>n</sub>,&phi;
+      <sub>n</sub>
+      <br/> Si &Sigma;
+      <sub>n</sub>&#8876;&phi;
+      <sub>n</sub>, &Sigma;
+      <sub>n+1</sub>=&Sigma;
+      <sub>n</sub>,&not;&phi;
+      <sub>n</sub>
+      <br/> &Sigma; = &#8899;
+      <sub>n&isin;&#8469;</sub>&Sigma;
+      <sub>n</sub>.
+      <br/> On montre que &Sigma; est consistant.
+      <br/> Chaque &Sigma;
+      <sub>n</sub> est inclus dans le suivant : &Sigma;
+      <sub>0</sub>&sube;&Sigma;
+      <sub>1</sub>&sube;...&sube;&Sigma;
+      <sub>n</sub>&sube;...&sube;&Sigma;
+      <br/> Chaque &Sigma;
+      <sub>n</sub> est consistant :
+      <br/> Ceci est vrai pour n=0 puisque &Gamma; est suppos&eacute; consistant
+      et &Gamma;=&Sigma;
+      <sub>0</sub>.
+      <br/> Soit &Sigma;
+      <sub>n</sub> consistant pour tout n &lt; k, on montre que &Sigma;
+      <sub>k</sub> est consistant.
+      <br/> Si &Sigma;
+      <sub>n</sub>&#8866;&phi;
+      <sub>n</sub>, alors &Sigma;
+      <sub>n</sub>,&phi;
+      <sub>n</sub> (c'est-&agrave; -dire &Sigma;
+      <sub>n+1</sub>) est consistant selon 3.6b.
+      <br/> Si &Sigma;
+      <sub>n</sub>&#8876;&phi;
+      <sub>n</sub>, alors &Sigma;
+      <sub>n</sub>,&not;&phi;
+      <sub>n</sub> (c'est-&agrave; -dire &Sigma;
+      <sub>n+1</sub>) est consistant selon 3.6a.
+      <br/> Donc &Sigma;
+      <sub>n+1</sub> est consistant.
+      <br/> Donc &Sigma; est consistant, car s'il &eacute;tait inconsistant on
+      aurait &Sigma;&#8866;&phi; et &Sigma;&#8866;&not;&phi;. Chacune de ces
+      d&eacute;rivations est de longueur finie et utilise un nombre fini
+      d'hypoth&egrave;ses de &Sigma;. Donc il existerait un certain entier i tel que
+      &Sigma;
+      <sub>i</sub> inclut ces hypoth&egrave;ses et on aurait &Sigma;
+      <sub>i</sub>&#8866;&phi; et &Sigma;
+      <sub>i</sub>&#8866;&not;&phi;, ce qui est impossible de par la
+      consistance de chaque &Sigma;
+      <sub>n</sub> inclus dans &Sigma;.
+      <br/> Donc &Sigma; est consistant &#8718;.
+      <br/> On montre ensuite que &Sigma; est complet.
+      <br/> Comme toute formule &phi; de L apparait dans l'&eacute;num&eacute;ration de
+      toutes les formules &phi;
+      <sub>0</sub>...&phi;
+      <sub>n</sub>
+      <br/> elle est incluse dans un des sous-ensembles &Sigma;
+      <sub>0</sub>...&Sigma;
+      <sub>n</sub> et donc dans &Sigma;.
+      <br/> Donc l'ensemble original &Gamma; est inclus dans un ensemble
+      complet &Sigma;. Selon le th&eacute;or&egrave;me 3.13 il existe une et une seule
+      valuation satisfaisant &Sigma; qui satisfait aussi &Gamma; : &Gamma;
+      est donc satisfaisable &#8718;.
+      <br/>
+      R&eacute;sum&eacute; :
+      On veut montrer que si &Gamma;&#8872;&phi; alors &Gamma;&#8866;&phi;.	
+      <ol>
+         <li>
+            L'&eacute;nonc&eacute; est &eacute;quivalent &agrave; : si &Gamma; est consistant il est satisfaisable.
+            <div style="font-size: 0.8em;">
+               Si &Gamma; n'est pas satisfaisable on a pour toute formule &phi; :
+               &Gamma;&#8872;&phi; et &Gamma;&#8872;&not;&phi;, et donc 
+               &Gamma;&#8866;&phi; et &Gamma;&#8866;&not;&phi;, c'est-&agrave;-dire que &Gamma; est inconsistant. 
+            </div>
+            <div style="font-size: 0.8em;">
+               Si &Gamma;&#8876; &phi; alors &Gamma;,&not;&phi; est consistant (Th&eacute;or&egrave;me 3.6a). 
+               Donc &Gamma;,&not;&phi; est satisfaisable.
+            </div>
+         </li>
+         <li>
+            Si &Gamma; est consistant, il est inclus dans un ensemble maximal-consistant &Sigma;.
+            <div style="font-size: 0.8em;">
+               Soit &phi;<sub>0</sub>, ... , &phi;<sub>n</sub> l'&eacute;num&eacute;ration des formules.
+               &Sigma; est l'union infinie de &Sigma;<sub>0</sub>, ... , &Sigma;<sub>n</sub>
+               avec &Gamma; = &Sigma;<sub>0</sub> et &Sigma;<sub>n+1</sub> = &Sigma;<sub>n</sub>,&phi;<sub>n</sub>
+               (si  &Sigma;<sub>n</sub>&#8866;&phi;<sub>n</sub>) ou  &Sigma;<sub>n</sub>,&not;&phi;<sub>n</sub> sinon.
+               Chaque &Sigma;<sub>n</sub> est consistant et donc &Sigma; est consistant. 
+            </div>
+         </li>
+         <li>&Sigma; est satisfaisable et donc &Gamma; est satisfaisable.</li>
+      </ol>
+      <h4>
+         Th&eacute;or&egrave;me de la compl&eacute;tude faible<br/>
+      </h4>
+      (exercice 3.26)
+      <span style="font-style: italic;"><br/> <br/> </span>
+      <span class="bold_italic"> Pour toute formule &phi; si
+      &#8872;&phi; alors &#8866;&phi; (si &phi; est une tautologie il existe
+      une d&eacute;rivation de &phi;).</span>
+      <br/>
+      <br/>Preuve :
+      <br/>Soit une formule&nbsp;&phi; comportant les variables
+      propositionnelles p
+      <sub>1</sub>...p
+      <sub>n</sub>.
+      <br/>Soit v une valuation.
+      <br/>Soient P<sub>1</sub>,...,P<sub>n</sub> des formules d&eacute;finies par :
+	  <br/>P<sub>i</sub>=p<sub>i</sub> si v(p<sub>i</sub>)=T, P<sub>i</sub>=&not;p<sub>i</sub> si v(p<sub>i</sub>)=F.
+	  <br/>Montrer que si v(&phi;)=T alors P<sub>1</sub>,...,P<sub>n</sub>&#8866;&phi; et si v(&phi;)=F alors P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;&phi;.
+	  <br/>Soit L(&phi;) le nombre de connecteurs de &phi;.
+	  On d&eacute;montrera la propri&eacute;t&eacute; par induction sur L(&phi;).
+	  <br/>
+	  A. Soit L(&phi;)=0. &phi; est donc atomique, c'est-&agrave;-dire qu'il existe une variable propositionnelle p telle que &phi; = p.
+	  <br/>Si v(p) = T, P<sub>1</sub>=p=&phi; et puisque &phi;&#8866;&phi; on a bien P<sub>1</sub>&#8866;&phi;.
+	  <br/>Si v(p) = F, P<sub>1</sub>=&not;p=&not;&phi; et puisque &not;&phi;&#8866;&not;&phi; on a bien P<sub>1</sub>&#8866;&not;&phi;.
+	  <br/>
+	  B. Soit L(&phi;)&gt;0. On suppose la propri&eacute;t&eacute; vraie pour tout &phi; telle que L(&phi;)&lt;k.
+	  On montre que la propri&eacute;t&eacute; est vraie pour tout &phi; telle que  L(&phi;)=k.
+	  <br/>
+	  B1. Soit &phi; de la forme &not;&psi;.
+	  <br/>
+	  Si v(&psi;)=T, P<sub>1</sub>,...,P<sub>n</sub>&#8866;&psi;.
+	  <br/>
+	  Si v(&psi;)=F, P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;&psi;.
+	  <br/>
+	  Or v(&psi;)=T si et seulement si v(&phi;)=F, et v(&psi;)=F si et seulement si v(&phi;)=T.
+	  <br/>
+	  Donc si v(&phi;)=T, P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;&psi;, et si v(&phi;)=F, P<sub>1</sub>,...,P<sub>n</sub>&#8866;&psi;.
+	  <br/>
+	  Donc, puisque &not;&psi;=&phi;, si v(&phi;)=T, P<sub>1</sub>,...,P<sub>n</sub>&#8866;&phi;, et puisque &psi;&#8866;&not;(&not;&psi;),
+	  si v(&phi;)=F, P<sub>1</sub>,...,P<sub>n</sub>&#8866;&psi;&#8866;&not;(&not;&psi;)=&not;&phi;&#8718;.
+	<br/>
+	  B2. Soit &phi; de la forme (&psi;&rarr;&theta;).
+	  <br/>
+	  Il faut montrer que P<sub>1</sub>,...,P<sub>n</sub>&#8866;(&psi;&rarr;&theta;) si v(&psi;&rarr;&theta;)=T et P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;(&psi;&rarr;&theta;) si v(&psi;&rarr;&theta;)=F.
+	  <br/>
+	  B2a. Soit v(&psi;&rarr;&theta;)=T.
+	  <br/>Donc on a v(&psi;)=F, ou v(&theta;)=T.
+	  <br/>
+	  B2a1. Si v(&psi;)=F, on a P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;&psi; (car L(&psi;) < k, hypothèse d'induction).
+	  <br/>&not;&psi;&rarr;(&not;&theta;&rarr;&not;&psi;) Axiome 1
+	  <br/>Donc P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;&psi;&#8866;&not;&theta;&rarr;&not;&psi; Modus Ponens
+	  <br/>(&not;&theta;&rarr;&not;&psi;)&rarr;(&psi;&rarr;&theta;) Axiome 3
+	  <br/>Donc P<sub>1</sub>,...,P<sub>n</sub>&#8866;&psi;&rarr;&theta;=&phi; Modus Ponens &#8718;.
+	  <br/>
+	  B2a2. Si v(&theta;)=T
+	   <br/>
+	   Donc P<sub>1</sub>,...,P<sub>n</sub>&#8866;&theta; (car L(&theta;) < k, hypothèse d'induction)
+	   <br/>
+	   P<sub>1</sub>,...,P<sub>n</sub>, &psi;&#8866;&theta; (théorème de l'augmentation)
+	   <br/>
+	   P<sub>1</sub>,...,P<sub>n</sub>&#8866;&psi;&rarr;&theta;=&phi;&#8718; (théorème de la déduction).
+	   <br/>
+	  B2b. Soit v(&psi;&rarr;&theta;)=F.
+	  <br/>
+	  Donc v(&psi;)=T et v(&theta;)=F.
+	  <br/>Donc P<sub>1</sub>,...,P<sub>n</sub>&#8866;&psi; et P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;&theta; (hypothèse d'induction)
+	  <br/> Or (selon exercice 3.10b) &psi;,&not;&theta;&#8866;&not;(&psi;&rarr;&theta;)=&not;&phi; et donc P<sub>1</sub>,...,P<sub>n</sub>&#8866;&not;&phi;&#8718;.
+		<br/>
+	  
+   </body>
+</html>
