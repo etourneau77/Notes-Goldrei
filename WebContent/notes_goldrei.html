@@ -9,20 +9,16 @@
             	font-size: 1em;
             	font-family: Verdana, sans-serif;
             	width: 80%;
-            }
-            
+            }            
             .bold_italic {
             	font: italic bold 1em Georgia, serif;
-            }
-            
+            }            
             .italic {
             	font: italic normal 1em Verdana, sans-serif;
-            }
-            
+            }            
             h5 {
             	font-size: 1.2em;
-            }
-            
+            }            
             h6 {
             	font-size: 1.1em;
             }           
@@ -41,26 +37,17 @@
       <sub>n </sub>=&phi; les &eacute;tapes de la d&eacute;rivation de &Gamma; &#8872;  &phi; .
       Soit v une valuation satisfaisant &Gamma; . On montre que v satisfait
       &phi; .</p>
-      <p> (cas de base) La premi&egrave;re ligne d
+      <div> (cas de base) La premi&egrave;re ligne d
       <sub>1</sub> a &eacute;t&eacute; obtenue soit comme hypoth&egrave;se (d
       <sub>1</sub> &isin; &Gamma; ) soit comme axiome. Si d
       <sub>1</sub> &isin; &Gamma; alors v satisfait d
       <sub>1</sub>. Si d
       <sub>1</sub> est un axiome alors c'est aussi une tautologie, toute
-      valuation satisfait d
-      <sub>1</sub> et v satisfait d
-      <sub>1</sub></p>.
-      <p> (hypoth&egrave;se d'induction) Si pour tout k &lt; n v satisfait d
-      <sub>k</sub> alors v satisfait &phi; . Si &phi; a &eacute;t&eacute; obtenue comme
-      hypoth&egrave;se ou axiome alors v satisfait &phi; (même preuve que pour d
-      <sub>1</sub>). Si &phi; a &eacute;t&eacute; obtenue par application du Modus Ponens
-      alors il existe des formules ant&eacute;rieures dans la d&eacute;rivation d
-      <sub>i</sub> et d
-      <sub>j</sub> telles que d
-      <sub>j</sub>= d
-      <sub>i</sub> &rarr; &phi; . Puisque v satisfait d
-      <sub>i </sub>et d
-      <sub>j</sub> v satisfait &phi; &#8718; .</p>
+      valuation satisfait d<sub>1</sub> et v satisfait d<sub>1</sub>(hypoth&egrave;se d'induction).</div>
+	  Si pour tout k &lt; n v satisfait d<sub>k</sub> alors v satisfait &phi; . Si &phi; a &eacute;t&eacute; obtenue comme
+      hypoth&egrave;se ou axiome alors v satisfait &phi; (même preuve que pour d<sub>1</sub>). Si &phi; a &eacute;t&eacute; obtenue par application du Modus Ponens
+      alors il existe des formules ant&eacute;rieures dans la d&eacute;rivation d<sub>i</sub> et d<sub>j</sub> telles que d<sub>j</sub>= d<sub>i</sub> &rarr; &phi;.
+	  Puisque v satisfait d<sub>i </sub>et d<sub>j</sub> v satisfait &phi; &#8718; .</p>
       
       <h3>Consistance d'un ensemble de formules</h3>
       Un ensemble &Gamma; de formules est dit
@@ -91,13 +78,13 @@
       <br/> En effet si &Gamma;&eacute;tait inconsistant on aurait une formule
       &chi; telle que &Gamma; &#8866; &chi; et &Gamma; &#8866;  &not; &chi; .
       <br/> On sait que (Ex. 3.7f) pour toutes formules &psi; et
-      &theta; &not; &psi;  &#8866; &psi; &rarr; &theta;
-      <p> [ &not; &psi;  &rarr; (&not;&theta; &rarr;  &not; &psi; ) Ax1</p>
-      <p>  &not; &psi;  hypoth&egrave;se</p>
-      <p> (&not;&theta; &rarr;  &not; &psi; ) MP</p>
-      <p> (&not;&theta; &rarr;  &not; &psi; ) &rarr; (&psi; &rarr; &theta; ) Ax3</p>
-      <p> &psi; &rarr; &theta; MP]</p>
-      <p> Donc &not; &chi; , &chi; &#8866;  (&chi; &rarr; &phi; ) &#8866; &phi;</p>
+      &theta;, on a : &not; &psi; &#8866; &psi; &rarr; &theta;.
+      <div>&nbsp;&nbsp;&nbsp;[ &not; &psi;  &rarr; (&not;&theta; &rarr;  &not; &psi; ) Ax1<br/>
+      &nbsp;&nbsp;&nbsp;&not; &psi;  hypoth&egrave;se<br/>
+      &nbsp;&nbsp;&nbsp;(&not;&theta; &rarr;  &not; &psi; ) MP<br/>
+      &nbsp;&nbsp;&nbsp;(&not;&theta; &rarr;  &not; &psi; ) &rarr; (&psi; &rarr; &theta; ) Ax3<br/>
+      &nbsp;&nbsp;&nbsp;&psi; &rarr; &theta; MP]<br/>
+      Donc &not; &chi; , &chi; &#8866;  (&chi; &rarr; &phi; ) &#8866; &phi;<br/>
       Si &Gamma; est inconsistant, on a &Gamma; &#8866; &phi; pour TOUTE
       formule &phi; . Comme par hypoth&egrave;se &Gamma; &#8876; &phi; , &Gamma; est
       consistant &#8718; .
@@ -142,15 +129,15 @@
       <div class="italic"> 
       	a2) Si &Gamma;,&not;&phi; est consistant alors &Gamma;&#8876;&phi; . <br/>
       </div>
-      <br/> La proposition est &eacute;quivalente &agrave; : si &Gamma; &#8866; &phi;
+       <div> La proposition est &eacute;quivalente &agrave; : si &Gamma; &#8866; &phi;
       alors &Gamma;,&not;&phi; est inconsistant.
       <br/> Si &Gamma; &#8866; &phi; alors &Gamma;,&not;&phi; &#8866; &phi;
       et aussi &Gamma;,&not;&phi; &#8866; &not;&phi; (r&egrave;gle des hypoth&egrave;ses),
       &Gamma;,&not;&phi; est inconsistant &#8718; .
-      
-      <span class="bold_italic">Si &Gamma; est consistant et
-      &Gamma; &#8866; &phi; alors &Gamma;,&phi; est consistant.</span>
-      <br/> Supposons que &Gamma;,&phi; est inconsistant. Alors il existe
+      </div>
+      <div class="italic"><br/>b) Si &Gamma; est consistant et
+      &Gamma; &#8866; &phi; alors &Gamma;,&phi; est consistant.</div>
+      <div> Supposons que &Gamma;,&phi; est inconsistant. Alors il existe
       une formule &chi; telle que &Gamma;,&phi; &#8866; &chi; et
       &Gamma;,&phi; &#8866; &not; &chi; , et donc aussi
       &Gamma; &#8866; &phi; &rarr; &chi; et &Gamma; &#8866;  &phi; &rarr; &not;&chi;
@@ -161,34 +148,39 @@
       &Gamma; &#8866; &phi; &rarr; &not;&chi; on obtient &Gamma; &#8866; 
       &not; &chi; . Puisque &Gamma; &#8866; &chi; et &Gamma; &#8866; &not; &chi; ,
       &Gamma; serait inconsistant contrairement &agrave;  l'hypoth&egrave;se. Donc
-      &Gamma;,&phi; est consistant &#8718;.
+      &Gamma;,&phi; est consistant &#8718;.</div>
+	  
+	  <!--Th. 3.7-->
+	  
       <h4>Th&eacute;or&egrave;me 3.7</h4>
-      <div class="bold_italic">Les deux assertions suivantes sont &eacute;quivalentes: </div>
+      <div class="bold_italic">Les deux assertions suivantes sont &eacute;quivalentes: (exercice 3.19)</div>
       <div class="bold_italic">a) Pour tout ensemble de formules &Gamma; et toute formule &phi; si &Gamma; &#8866; &phi; alors &Gamma; &#8872;  &phi; .</div>
       <div class="bold_italic">b) Pour tout ensemble de formules &Delta; si &Delta; est satisfaisable alors &Delta; est consistant.</div>
       
       <br/> Preuve:
+	  <div>La preuve se r&eacute;alise en deux &eacute;tapes : on suppose "a" vraie et on démontre la contrapos&eacute;e de "b".</div>
+	  <div>Ensuite, on suppose "b" vraie et on démontre la contrapos&eacute;e de "a".</div>
       <div class="italic">
-      	Si a alors b: (exercice 3.19) on montre la contrapos&eacute;e:
+      	<br/>Etape 1 : si a alors b: (exercice 3.19) on montre que si &Delta; est inconsistant alors il n'est pas satisfaisable.
       </div>
-      Si &Delta; est inconsistant alors il n'est
-      pas satisfaisable. Si &Delta; est inconsistant il existe une formule
-      &chi; telle que: &Delta; &#8866; &chi; et &Delta; &#8866; &not; &chi; 
-      <br/> Donc conform&eacute;ment &agrave;  "a" nous avons: &Delta; &#8872;  &chi; et
-      &Delta; &#8872;  &not; &chi; Par d&eacute;finition de  &#8872; , cela signifie que
-      toute valuation satisfaisant &Delta; satisfait &agrave;  la fois &chi; et
-      &not; &chi; , ce qui est impossible selon la d&eacute;finition de &not; . Donc
-      comme aucune valuation ne satisfait &Delta; , &Delta; n'est pas
-      satisfaisable&nbsp; &#8718; .      
-      <span class="italic">Si b alors a:</span> (preuve p.104) on montre la
-      contrapos&eacute;e:
-      <span class="italic">Si &Gamma;&#8877;&phi; alors
-      &Gamma;&#8876;&phi;</span> Si &Gamma;&#8877;&phi; il existe une valuation v
-      satisfaisant &Gamma; et ne satisfaisant pas &phi; .
+	  <div>
+      Si &Delta; est inconsistant il existe une formule &chi; telle que: &Delta; &#8866; &chi; et &Delta; &#8866; &not; &chi; 
+      <br/> Donc conform&eacute;ment &agrave;  "a" nous avons: 
+	  <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&Delta; &#8872;  &chi;
+      <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&Delta; &#8872;  &not; &chi; 
+	  <br/>Par d&eacute;finition de &#8872;, cela signifie que toute valuation satisfaisant &Delta; satisfait &agrave; la fois &chi; et &not; &chi;,
+	  ce qui est impossible selon la d&eacute;finition de "&not;". 
+	  Donc aucune valuation ne satisfait &Delta;, c'est-&agrave;-dire que &Delta; n'est pas satisfaisable&nbsp; &#8718;.
+	  </div>
+      <div class="italic">
+		<br/>Etape 2 : si b alors a: on montre que si &Gamma;&#8877;&phi; alors &Gamma;&#8876;&phi; (preuve p.104)
+	  </div>
+	  <div>
+	  Si &Gamma;&#8877;&phi; il existe une valuation v satisfaisant &Gamma; et ne satisfaisant pas &phi; .
       <br/> Donc v satisfait &Gamma;, &not;&phi; .
       <br/> Donc conform&eacute;ment &agrave;  b, &Gamma; ,&not;&phi; &eacute;tant
-      satisfaisable, est consistant. De par le th&eacute;or&egrave;me 3.6a nous pouvons en
-      conclure &Gamma; &#8876; &phi; &#8718; .
+      satisfaisable, est consistant. De par le th&eacute;or&egrave;me 3.6a nous pouvons en conclure &Gamma; &#8876; &phi; &#8718; .
+	  </div>
       <h4>Th&eacute;or&egrave;me 3.8</h4>
       <span class="bold_italic">Le syst&egrave;me S est consistant.</span> Le
       th&eacute;or&egrave;me de la validit&eacute; (soundness) montre que si on a
@@ -202,8 +194,7 @@
       <span class="bold_italic">Pour tout ensemble de formules &Gamma;
       et toute formule &phi; , si &Gamma; &#8872;  &phi; alors
       &Gamma; &#8866; &phi; .</span> Ceci signifie que si toute valuation satisfaisant
-      &Gamma; satisfait &phi; il existe une d&eacute;rivation de
-      &Gamma; &#8866; &phi; .
+      &Gamma; satisfait &phi; il existe une d&eacute;rivation &Gamma; &#8866; &phi;.
       <h4>Th&eacute;or&egrave;me 3.10</h4>
       <span class="bold_italic">Les deux assertions suivantes sont
       &eacute;quivalentes: <br/> a) Pour tout ensemble de formules &Gamma; et
