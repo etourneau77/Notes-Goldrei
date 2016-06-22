@@ -15,7 +15,10 @@
          }            
          .italic {
          font: italic normal 1em Verdana, sans-serif;
-         }            
+         }
+		.small {
+		font-size:0.9em;
+		} 
          h5 {
          font-size: 1.2em;
          }            
@@ -85,12 +88,14 @@
       <div>On sait que (Ex. 3.7f) pour toutes formules &psi; et
          &theta;, on a : &not; &psi; &#8866; &psi; &rarr; &theta;.
       </div>
+	  <div style="font-size:0.9em">
       <p>&nbsp;&nbsp;&nbsp;[ &not; &psi;  &rarr; (&not;&theta; &rarr;  &not; &psi; ) Ax1</p>
       <p>&nbsp;&nbsp;&nbsp;&not; &psi;  hypoth&egrave;se</p>
       <p>&nbsp;&nbsp;&nbsp;(&not;&theta; &rarr;  &not; &psi; ) MP</p>
       <p>&nbsp;&nbsp;&nbsp;(&not;&theta; &rarr;  &not; &psi; ) &rarr; (&psi; &rarr; &theta; ) Ax3</p>
       <p>&nbsp;&nbsp;&nbsp;&psi; &rarr; &theta; MP]</p>
       <p>Donc &not; &chi; , &chi; &#8866;  (&chi; &rarr; &phi; ) &#8866; &phi;</p>
+	  </div>
       <div>Si &Gamma; est inconsistant, on a &Gamma; &#8866; &phi; pour TOUTE
          formule &phi; . Comme par hypoth&egrave;se &Gamma; &#8876; &phi; , &Gamma; est
          consistant &#8718; .
@@ -121,6 +126,7 @@
          &not; &psi; ,&psi; &#8866; &theta; et donc &psi; &#8866; &theta; par MP.
       </p>
       <p> En appliquant 2 fois le th&eacute;or&egrave;me de la d&eacute;duction on obtient:</p>
+	  <div style="font-size:0.9em">
       <p>  &#8866;  &not; &psi;  &rarr; (&psi; &rarr; &theta; )</p>
       <p>  &not; &psi;  &rarr; (&psi; &rarr; &theta; )  &rarr; </p>
       <p>( &not; &psi;  &rarr; &psi; )  &rarr;  ( &not; &psi;  &rarr; &theta; ) Ax2</p>
@@ -137,6 +143,7 @@
       <p> (&not;&phi; &rarr; &phi; )  &rarr;  &phi; MP</p>
       <p> (&not;&phi; &rarr; &phi; ) hypoth&egrave;se</p>
       <p> &phi; MP ] alors &Gamma; &#8866; &phi; &#8718; .</p>
+	  </div>
       <div class="italic"> 
          a2) Si &Gamma;,&not;&phi; est consistant alors &Gamma;&#8876;&phi; . <br/>
       </div>
@@ -168,8 +175,8 @@
       <div class="bold_italic">a) Pour tout ensemble de formules &Gamma; et toute formule &phi; si &Gamma; &#8866; &phi; alors &Gamma; &#8872;  &phi; .</div>
       <div class="bold_italic">b) Pour tout ensemble de formules &Delta; si &Delta; est satisfaisable alors &Delta; est consistant.</div>
       <p> Preuve:</p>
-      <div>La preuve se r&eacute;alise en deux &eacute;tapes : on suppose "a" vraie et on démontre la contrapos&eacute;e de "b".</div>
-      <div>Ensuite, on suppose "b" vraie et on démontre la contrapos&eacute;e de "a".</div>
+      <div>La preuve se r&eacute;alise en deux &eacute;tapes : on suppose "a" vraie et on d&eacute;montre la contrapos&eacute;e de "b".</div>
+      <div>Ensuite, on suppose "b" vraie et on d&eacute;montre la contrapos&eacute;e de "a".</div>
       <div class="italic">
          <br/>Etape 1 : si a alors b: (exercice 3.19) on montre que si &Delta; est inconsistant alors il n'est pas satisfaisable.
       </div>
@@ -434,7 +441,7 @@
          <br/>Donc puisque &Sigma;<sub>n+1</sub>&sub;&Sigma; on a bien &phi;&isin;&Sigma; ou &phi;&notin;&Sigma; &#8718;.
          <br/>Selon le th&eacute;r&egrave;me 3.13 il existe une valuation satisfaisant &Sigma; et donc satisfaisant aussi &Delta;, c'est-&agrave;-dire que &Delta; est satisfaisable &#8718;.
          <br/>Selon le th&eacute;or&egrave;me 3.10, l'&eacute;nonc&eacute; : pour tout ensemble &Delta;, si &Delta; est consistant, alors il est satisfaisable, &eacute;quivaut &agrave; : 
-         <br/>Pour tout ensemble &Gamma; et toute formule &phi;, si &Gamma;&#8872;&phi;, alors &Gamma;&#8866;&phi;. Ceci achève de d&eacute;montrer la compl&eacute;tude de L &#8718;.
+         <br/>Pour tout ensemble &Gamma; et toute formule &phi;, si &Gamma;&#8872;&phi;, alors &Gamma;&#8866;&phi;. Ceci ach&egrave;ve de d&eacute;montrer la compl&eacute;tude de L &#8718;.
       </div>
       <h4>
          Th&eacute;or&egrave;me de la compl&eacute;tude faible<br/>
@@ -456,58 +463,114 @@
          <br/>Montrer que si v( &phi; )=T alors P<sub>1</sub>,...,P<sub>n</sub> &#8866; &phi; et si v( &phi; )=F alors P<sub>1</sub>,...,P<sub>n</sub> &#8866; &not;&phi; .
          <br/>Soit L( &phi; ) le nombre de connecteurs de &phi; .
          On d&eacute;montrera la propri&eacute;t&eacute; par induction sur L( &phi; ).
-         <br/>
-         A. Soit L( &phi; )=0. &phi; est donc atomique, c'est-à-dire qu'il existe une variable propositionnelle p telle que &phi; = p.
+         <br/><br/>
+		 <div style="font-size:0.9em">
+         A. <span style="italic">Soit L( &phi; )=0.</span>
+		 <br/>&phi; est donc atomique, c'est-à-dire qu'il existe une variable propositionnelle p telle que &phi; = p.
          <br/>Si v(p) = T, P<sub>1</sub>=p=&phi; et puisque &phi; &#8866; &phi; on a bien P<sub>1</sub> &#8866; &phi; .
          <br/>Si v(p) = F, P<sub>1</sub>=&not;p=&not;&phi; et puisque &not;&phi; &#8866; &not;&phi; on a bien P<sub>1</sub> &#8866; &not;&phi; .
          <br/>
-         B. Soit L( &phi; )&gt; 0. On suppose la propri&eacute;t&eacute; vraie pour tout &phi; telle que L( &phi; )&lt; k.
+         B. <span style="italic">Soit L( &phi; )&gt; 0.</span>
+		 <br/>On suppose la propri&eacute;t&eacute; vraie pour tout &phi; telle que L( &phi; )&lt; k.
          On montre que la propri&eacute;t&eacute; est vraie pour tout &phi; telle que  L( &phi; )=k.
          <br/>
-         B1. Soit &phi; de la forme  &not; &psi; .
+         &nbsp;&nbsp;&nbsp;<span style="italic">B1. Soit &phi; de la forme  &not; &psi; .</span>
          <br/>
-         Si v( &psi; ) = T, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi;.
+         &nbsp;&nbsp;&nbsp;Si v( &psi; ) = T, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi;.
          <br/>
-         Si v( &psi; ) = F, P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi; .
+         &nbsp;&nbsp;&nbsp;Si v( &psi; ) = F, P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi; .
          <br/>
-         Or v( &psi; ) = T si et seulement si v( &phi; )=F, et v( &psi; )=F si et seulement si v( &phi; )=T.
+         &nbsp;&nbsp;&nbsp;Or v( &psi; ) = T si et seulement si v( &phi; )=F, et v( &psi; )=F si et seulement si v( &phi; )=T.
          <br/>
-         Donc si v( &phi; ) = T, P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi; , et si v( &phi; )=F, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; .
+         &nbsp;&nbsp;&nbsp;Donc si v( &phi; ) = T, P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi; , et si v( &phi; )=F, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; .
          <br/>
-         Donc, puisque  &not; &psi; =&phi; , si v( &phi; )=T, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &phi; , et puisque &psi; &#8866; &not; ( &not; &psi; ),
-         si v( &phi; ) = F, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; &#8866; &not; ( &not; &psi; )=&not; &phi; &#8718; .
+         &nbsp;&nbsp;&nbsp;Donc, puisque  &not; &psi; =&phi; , si v( &phi; )=T, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &phi; , et puisque &psi; &#8866; &not; ( &not; &psi; ),
+         &nbsp;&nbsp;&nbsp;si v( &phi; ) = F, P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; &#8866; &not; ( &not; &psi; )=&not; &phi; &#8718; .
          <br/>
-         B2. Soit &phi; de la forme (&psi; &rarr; &theta; ).
+         &nbsp;&nbsp;&nbsp;<span style="italic">B2. Soit &phi; de la forme (&psi; &rarr; &theta; ).</span>
          <br/>
-         Il faut montrer que P<sub>1</sub>,...,P<sub>n</sub> &#8866; (&psi; &rarr; &theta; ) si v(&psi; &rarr; &theta; )=T et P<sub>1</sub>,...,P<sub>n</sub> &#8866; &not;(&psi; &rarr; &theta; ) si v(&psi; &rarr; &theta; )=F.
+         &nbsp;&nbsp;&nbsp;Il faut montrer que P<sub>1</sub>,...,P<sub>n</sub> &#8866; (&psi; &rarr; &theta; ) si v(&psi; &rarr; &theta; )=T et P<sub>1</sub>,...,P<sub>n</sub> &#8866; &not;(&psi; &rarr; &theta; ) si v(&psi; &rarr; &theta; )=F.
          <br/>
-         B2a. Soit v(&psi; &rarr; &theta; )=T.
-         <br/>Donc on a v( &psi; )=F, ou v( &theta; )=T.
+		 
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="italic">B2a. Soit v(&psi; &rarr; &theta; )=T.</span>
+		 
          <br/>
-         B2a1. Si v( &psi; )=F, on a P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi;  (car L( &psi; ) &lt; k, hypothèse d'induction).
-         <br/> &not; &psi;  &rarr; (&not;&theta; &rarr;  &not; &psi; ) Axiome 1
-         <br/>Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi;  &#8866; &not;&theta; &rarr;  &not; &psi;  Modus Ponens
-         <br/>(&not;&theta; &rarr;  &not; &psi; ) &rarr; (&psi; &rarr; &theta; ) Axiome 3
-         <br/>Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; &rarr; &theta;=&phi; Modus Ponens &#8718; .
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donc on a v( &psi; )=F, ou v( &theta; )=T.
          <br/>
-         B2a2. Si v( &theta; ) = T
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="italic">B2a1. Si v( &psi; )=F.</span>
+		 
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On a P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi;  (car L( &psi; ) &lt; k, hypoth&egrave;se d'induction).
+         <br/> 
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &not; &psi;  &rarr; (&not;&theta; &rarr;  &not; &psi; ) Axiome 1
          <br/>
-         Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &theta; (car L(&theta; ) &lt; k, hypothèse d'induction)
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866;  &not; &psi;  &#8866; &not;&theta; &rarr;  &not; &psi;  Modus Ponens
          <br/>
-         P<sub>1</sub>,...,P<sub>n</sub>, &psi; &#8866; &theta; (théorème de l'augmentation)
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&not;&theta; &rarr;  &not; &psi; ) &rarr; (&psi; &rarr; &theta; ) Axiome 3
          <br/>
-         P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; &rarr; &theta;=&phi;&#8718; (théorème de la déduction).
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; &rarr; &theta;=&phi; Modus Ponens &#8718; .
          <br/>
-         B2b. Soit v(&psi; &rarr; &theta; ) = F.
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="italic">B2a2. Si v( &theta; ) = T</span>
          <br/>
-         Donc v( &psi; )=T et v( &theta; )=F.
-         <br/>Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; et P<sub>1</sub>,...,P<sub>n</sub> &#8866; &not;&theta; (hypothèse d'induction)
-         <br/> Or (selon exercice 3.10b) &psi;,&not;&theta; &#8866; &not;(&psi; &rarr; &theta; )=&not;&phi; et donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &not; &phi; &#8718; .
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &theta; (car L(&theta; ) &lt; k, hypoth&egrave;se d'induction)
+         <br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P<sub>1</sub>,...,P<sub>n</sub>, &psi; &#8866; &theta; (th&eacute;or&egrave;me de l'augmentation)
+         <br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; &rarr; &theta;=&phi; (th&eacute;or&egrave;me de la d&eacute;duction) &#8718;.
+		 
+         <br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="italic">B2b. Soit v(&psi; &rarr; &theta; ) = F.</span>
+         <br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donc v( &psi; )=T et v( &theta; )=F.
+         <br/>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &psi; et P<sub>1</sub>,...,P<sub>n</sub> &#8866; &not;&theta; (hypoth&egrave;se d'induction)
+         <br/> 
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or (selon exercice 3.10b) &psi;,&not;&theta; &#8866; &not;(&psi; &rarr; &theta; )=&not;&phi; et donc P<sub>1</sub>,...,P<sub>n</sub> &#8866; &not; &phi; &#8718;
+		 </div>.
+		 <div>
          <br/>
          Montrer que si pour toute formule &phi; , si &#8872; &phi; alors &#8866; &phi; , 
          on a aussi pour toute formule &phi; , si &Gamma; &#8872;  &phi; alors &Gamma; &#8866; &phi; .
          <br/>
-         Si &Gamma; &#8872;  &phi; alors  &#8872;  &Gamma; &rarr; &phi;, et donc  &#8866; &Gamma; &rarr; &phi; , et donc &Gamma; &#8866; &phi; .	
+         Si &Gamma; &#8872;  &phi; alors  &#8872;  &Gamma; &rarr; &phi;, et donc  &#8866; &Gamma; &rarr; &phi; , et donc &Gamma; &#8866; &phi; .
+		 A. Montrer que pour toutes formules &theta;,&psi;, si &theta;&#8872;&psi; alors &#8872;&theta;&rarr;&psi;.
+		<br/>Preuve:
+		<br/>Supposons que &#8872;&theta;&rarr;&psi; soit fausse. Donc il existe une valuation v telle que v(&theta;&rarr;&psi;) = F, c'est-&agrave;-dire que v(&theta;)=V et v(&psi;)=F. 
+		<br/>Mais comme &theta;&#8872;&psi; toute valuation satisfaisant &theta; satisfait &psi; &#8718;.
+		<br/>Comme si &theta;&#8872;&psi; alors &#8872;&theta;&rarr;&psi;, selon le th&eacute;or&egrave;me de la compl&eacute;tude faible si &#8872;&theta;&rarr;&psi; alors &#8866;&theta;&rarr;&psi;. 
+		<br/>Si &#8866;&theta;&rarr;&psi; alors &theta;&#8866;&psi; 
+		<br/>Preuve :
+		<br/>Dans la d&eacute;rivation &#8866;&theta;&rarr;&psi;, &theta;&rarr;&psi; est soit un axiome, soit a &eacute;t&eacute; obtenue par Modus Ponens.
+		<br/>A. &theta;&rarr;&psi; est un axiome.
+		<br/>Si &theta;&rarr;&psi; est un axiome, on montre &theta;&#8866;&psi; simplement :
+		<div class="small">
+		&nbsp;&nbsp;&nbsp;1. &theta; Hypoth&egrave;se
+		<br/>&nbsp;&nbsp;&nbsp;2. &theta;&rarr;&psi; Axiome 1, 2 ou 3 selon le cas.
+		<br/>&nbsp;&nbsp;&nbsp;3. &psi; MP 1,2
+		</div>
+		<br/>B. &theta;&rarr;&psi; a &eacute;t&eacute; obtenue par Modus Ponens.
+		<br/> 
+		On d&eacute;montre le r&eacute;sultat par induction sur la longueur L de la d&eacute;rivation &#8866;&theta;&rarr;&psi;.
+		<br/>Comme un Modus Ponens n&eacute;cessite au moins 3 &eacute;tapes on a L = 3 au minimum.
+		Cas de base : L = 3. Dans ce cas il existe une formule &chi; telle que &chi; est un axiome et &chi;&rarr;(&theta;&rarr;&psi;) est un axiome.
+		<br/>Dans ce cas on montre &theta;&rarr;&psi; par :
+		<div class="small">
+		<br/>1. &chi; Axiome 1,2, ou 3
+		<br/>2. &chi;&rarr;(&theta;&rarr;&psi;) Axiome 1, 2 ou 3
+		<br/>3. &theta;&rarr;&psi; MP 1,2
+		</div>		
+		<div>Hypoth&egrave;se d'induction : si pour toute d&eacute;rivation &#8866;&theta;&rarr;&psi; de longueur L &lt; k, on a &theta;&#8866;&psi;
+		<br/> c'est aussi vrai d'une d&eacute;rivation de longueur k.
+		<br/>Soit &phi;<sub>0</sub>,...,&phi;<sub>k</sub>=&theta;&rarr;&psi; une d&eacute;rivation de &theta;&rarr;&psi;.
+		<br/>Donc il existe deux formules &phi;<sub>i</sub>,&phi;<sub>j</sub> (i,j &lt; k) telles que &#8866;&phi;<sub>i</sub>, &#8866;&phi;<sub>j</sub>, &phi;<sub>j</sub>=&phi;<sub>i</sub>&rarr;(&theta;&rarr;&psi;)
+		<br/>La propriété étant vraie de &phi;<sub>j</sub>, on a &phi;<sub>i</sub>&#8866;&theta;&rarr;&psi;
+		<br/>Donc &phi;<sub>i</sub>, &theta;&#8866;&theta;&rarr;&psi; (Th. de l'augmentation)		
+		<br/>Donc &phi;<sub>i</sub>, &theta;&#8866;&psi; (par hypothèse et MP).
+		<br/>Donc &theta;&#8866;&phi;<sub>i</sub>&rarr;&psi; (Th. de la déduction).
+		<br/>Puisque &#8866;&phi;<sub>i</sub> par MP on obtient &theta;&#8866;&psi; &#8718;.
+		</div>
+		
+		</div>
+		
       </div>
    </body>
 </html>
